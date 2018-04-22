@@ -4825,7 +4825,7 @@ a.label:focus {
   height: 0;
   border-width: 4px;
   border-style: solid;
-  border-color: #777777 transparent transparent #777777;
+  border-color: #bd1515 transparent transparent #bd1515;
 }
 
 .panel-badger:hover:after {
