@@ -1895,7 +1895,6 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  text-align: center;
 }
 
 .input-group-addon:first-child {
