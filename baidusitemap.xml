@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>https://www.ifeier.tech/2017/03/05/Linux%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E6%97%B6%E9%97%B4%E7%BA%BF2017%E5%B9%B4%E7%89%88%E6%9C%AC/</loc>
+    <lastmod>2018-04-22T09:30:14.906Z</lastmod>
+    <data>
+        <display>
+        <title>Linux各发行版时间线2017年版本</title>
+        <pubTime>2017-03-05T14:47:20.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2017/05/06/Systemd%20%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%EF%BC%9A%E5%91%BD%E4%BB%A4%E7%AF%87/</loc>
+    <lastmod>2018-04-22T09:30:14.835Z</lastmod>
+    <data>
+        <display>
+        <title>Systemd 入门教程：命令篇</title>
+        <pubTime>2017-05-06T01:31:25.000Z</pubTime>
+        
+        <tag>centos7</tag>
+         
+         
+           
+             
+              <breadCrumb title="centos" url="https://www.ifeier.tech/categories/centos/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2017/03/04/Linux%E9%98%B2%E7%81%AB%E5%A2%99/</loc>
+    <lastmod>2018-04-22T09:29:33.353Z</lastmod>
+    <data>
+        <display>
+        <title>Linux防火墙</title>
+        <pubTime>2017-03-04T01:42:22.000Z</pubTime>
+        
+        <tag>防火墙</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/03/05/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</loc>
+    <lastmod>2018-04-22T09:29:33.308Z</lastmod>
+    <data>
+        <display>
+        <title>Linux服务器时间同步</title>
+        <pubTime>2016-03-05T01:42:22.000Z</pubTime>
+        
+        <tag>date</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/06/06/CentOS%EF%BC%886%E3%80%817%EF%BC%89%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D(hostname)/</loc>
+    <lastmod>2018-04-22T09:29:33.283Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS（6、7）修改主机名(hostname)</title>
+        <pubTime>2016-06-06T01:41:22.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/07/06/linux%E5%91%BD%E4%BB%A4-bc/</loc>
+    <lastmod>2018-04-22T09:29:33.238Z</lastmod>
+    <data>
+        <display>
+        <title>linux命令-bc</title>
+        <pubTime>2016-07-06T01:12:42.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2017/08/10/ansible%20puppet%20saltstack%E4%B8%89%E6%AC%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
+    <lastmod>2018-04-22T09:29:33.219Z</lastmod>
+    <data>
+        <display>
+        <title>ansible puppet saltstack三款自动化运维工具的对比！</title>
+        <pubTime>2017-08-10T06:41:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+             
+              <breadCrumb title="运维自动化工具" url="https://www.ifeier.tech/categories/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2017/08/06/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7saltstack/</loc>
+    <lastmod>2018-04-22T09:29:33.156Z</lastmod>
+    <data>
+        <display>
+        <title>运维自动化工具saltstack</title>
+        <pubTime>2017-08-06T10:42:22.000Z</pubTime>
+        
+        <tag>saltstack</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+             
+              <breadCrumb title="运维自动化工具" url="https://www.ifeier.tech/categories/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/07/06/linux%E5%91%BD%E4%BB%A4-head/</loc>
+    <lastmod>2018-04-22T09:29:33.121Z</lastmod>
+    <data>
+        <display>
+        <title>linux命令-head</title>
+        <pubTime>2016-07-06T09:12:42.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/07/06/linux%E5%91%BD%E4%BB%A4-grep/</loc>
+    <lastmod>2018-04-22T09:29:33.091Z</lastmod>
+    <data>
+        <display>
+        <title>linux命令-grep</title>
+        <pubTime>2016-07-06T07:12:42.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2017/06/06/8%E5%88%86%E9%92%9F%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E6%90%9E%E6%87%82Nginx/</loc>
+    <lastmod>2018-04-22T09:29:33.065Z</lastmod>
+    <data>
+        <display>
+        <title>8分钟带你深入浅出搞懂Nginx</title>
+        <pubTime>2017-06-06T01:41:22.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD-socket/</loc>
+    <lastmod>2018-04-22T09:29:33.034Z</lastmod>
+    <data>
+        <display>
+        <title>计算机专业术语-socket</title>
+        <pubTime>2016-04-04T01:41:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="术语" url="https://www.ifeier.tech/categories/%E6%9C%AF%E8%AF%AD/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2017/08/07/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7puppet/</loc>
+    <lastmod>2018-04-22T09:29:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>运维自动化工具puppet</title>
+        <pubTime>2017-08-07T11:42:22.000Z</pubTime>
+        
+        <tag>puppet</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+             
+              <breadCrumb title="运维自动化工具" url="https://www.ifeier.tech/categories/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/03/06/linux%E7%A6%81%E6%AD%A2ping%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%90%AFping%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2018-04-22T09:29:32.967Z</lastmod>
+    <data>
+        <display>
+        <title>linux禁止ping以及开启ping的方法</title>
+        <pubTime>2016-03-06T01:42:22.000Z</pubTime>
+        
+        <tag>ping</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/07/06/linux%E5%91%BD%E4%BB%A4-test/</loc>
+    <lastmod>2018-04-22T09:29:32.910Z</lastmod>
+    <data>
+        <display>
+        <title>linux命令-test</title>
+        <pubTime>2016-07-06T00:42:42.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/05/06/apache2.4%E7%89%88%E6%9C%AC%E4%B8%8E2.2%E7%89%88%E6%9C%AC%E7%9A%84%E5%B7%AE%E5%BC%82/</loc>
+    <lastmod>2018-04-22T09:29:32.872Z</lastmod>
+    <data>
+        <display>
+        <title>apache2.4版本与2.2版本的差异</title>
+        <pubTime>2016-05-06T01:41:22.000Z</pubTime>
+        
+        <tag>apache</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2017/08/09/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7ansible/</loc>
+    <lastmod>2018-04-22T09:29:32.834Z</lastmod>
+    <data>
+        <display>
+        <title>运维自动化工具ansible</title>
+        <pubTime>2017-08-09T12:42:22.000Z</pubTime>
+        
+        <tag>ansible</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+             
+              <breadCrumb title="运维自动化工具" url="https://www.ifeier.tech/categories/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/07/06/linux%E5%91%BD%E4%BB%A4-seq/</loc>
+    <lastmod>2018-04-22T09:29:32.809Z</lastmod>
+    <data>
+        <display>
+        <title>linux命令-seq</title>
+        <pubTime>2016-07-06T08:12:42.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/09/06/%E8%87%AA%E5%BB%BACA%E8%AE%A4%E8%AF%81%E5%92%8C%E8%AF%81%E4%B9%A6/</loc>
+    <lastmod>2018-04-22T09:29:32.785Z</lastmod>
+    <data>
+        <display>
+        <title>自建CA认证和证书</title>
+        <pubTime>2016-09-05T16:07:24.000Z</pubTime>
+        
+        <tag>CA</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/06/06/ab%E5%91%BD%E4%BB%A4%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2018-04-22T09:29:32.756Z</lastmod>
+    <data>
+        <display>
+        <title>ab命令压力测试</title>
+        <pubTime>2016-06-06T01:41:22.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/07/06/linux%E5%91%BD%E4%BB%A4-cat/</loc>
+    <lastmod>2018-04-22T09:29:32.718Z</lastmod>
+    <data>
+        <display>
+        <title>linux命令-cat</title>
+        <pubTime>2016-07-06T01:32:42.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2016/07/06/linux%E5%91%BD%E4%BB%A4-echo/</loc>
+    <lastmod>2018-04-22T09:29:32.654Z</lastmod>
+    <data>
+        <display>
+        <title>linux命令-echo</title>
+        <pubTime>2016-07-06T04:12:42.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.ifeier.tech/2018/02/07/%E9%87%91%E4%B8%9D%E9%9B%80%E5%8F%91%E5%B8%83%E3%80%81%E6%BB%9A%E5%8A%A8%E5%8F%91%E5%B8%83%E3%80%81%E8%93%9D%E7%BB%BF%E5%8F%91%E5%B8%83%E5%88%B0%E5%BA%95%E6%9C%89%E4%BB%80%E4%B9%88%E5%B7%AE%E5%88%AB%EF%BC%9F%E5%85%B3%E9%94%AE%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</loc>
+    <lastmod>2018-04-22T09:24:20.026Z</lastmod>
+    <data>
+        <display>
+        <title>金丝雀发布、滚动发布、蓝绿发布到底有什么差别？关键点是什么？</title>
+        <pubTime>2018-02-07T11:42:22.000Z</pubTime>
+        
+        <tag>发布</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="https://www.ifeier.tech/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://www.ifeier.tech/2017/01/07/CentOS7%E5%90%AF%E5%8A%A8%E5%8F%8A%E6%8E%92%E9%94%99/</loc>
+    <lastmod>2018-04-22T08:27:28.687Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7启动及排错</title>
+        <pubTime>2017-01-06T17:50:32.000Z</pubTime>
+        
+        <tag>centos7</tag>
+         
+         
+           
+             
+              <breadCrumb title="centos" url="https://www.ifeier.tech/categories/centos/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+</urlset>
