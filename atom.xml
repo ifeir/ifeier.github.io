@@ -141,29 +141,6 @@
   </entry>
   
   <entry>
-    <title>注意啦!</title>
-    <link href="http://blog.zhangqifei.top/2017/09/28/%E9%80%9A%E7%9F%A5/%E6%B3%A8%E6%84%8F%E5%95%A6%EF%BC%81/"/>
-    <id>http://blog.zhangqifei.top/2017/09/28/通知/注意啦！/</id>
-    <published>2017-09-28T07:12:09.000Z</published>
-    <updated>2018-04-23T07:24:33.650Z</updated>
-    
-    <content type="html"><![CDATA[<p>CSDN博客地址为： <a href="https://blog.csdn.net/qq_37187976/" target="_blank" rel="noopener">https://blog.csdn.net/qq_37187976/</a> 原有文章不迁移。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;CSDN博客地址为： &lt;a href=&quot;https://blog.csdn.net/qq_37187976/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/qq_37187976/&lt;/a&gt; 原有文章不迁移。&lt;/p
-      
-    
-    </summary>
-    
-      <category term="通知" scheme="http://blog.zhangqifei.top/categories/%E9%80%9A%E7%9F%A5/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>如何阅读一本书？</title>
     <link href="http://blog.zhangqifei.top/2017/09/04/%E9%9A%8F%E7%AC%94/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/"/>
     <id>http://blog.zhangqifei.top/2017/09/04/随笔/如何阅读一本书/</id>
@@ -519,6 +496,32 @@
 &lt;ol&gt;
 &lt;li&gt;命令格式：&lt;br&gt; head [参数]… [文件]…  &lt;/li&gt;
 
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
+    
+    
+      <category term="命令" scheme="http://blog.zhangqifei.top/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux命令-seq</title>
+    <link href="http://blog.zhangqifei.top/2016/07/06/linux/linux%E5%91%BD%E4%BB%A4-seq/"/>
+    <id>http://blog.zhangqifei.top/2016/07/06/linux/linux命令-seq/</id>
+    <published>2016-07-06T08:12:42.000Z</published>
+    <updated>2018-04-22T09:29:32.809Z</updated>
+    
+    <content type="html"><![CDATA[<p>seq命令用于产生从某个数到另外一个数之间的所有整数。</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">seq [选项]... 尾数</span><br><span class="line">seq [选项]... 首数 尾数 </span><br><span class="line">seq [选项]... 首数 增量 尾数</span><br></pre></td></tr></table></figure><h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f, --format=格式 使用printf 样式的浮点格式</span><br><span class="line">-s, --separator=字符串 使用指定字符串分隔数字（默认使用：\n）</span><br><span class="line">-w, --equal-width 在列前添加0 使得宽度相同</span><br></pre></td></tr></table></figure><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p><strong>-f选项：指定格式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -f &quot;%3g&quot; 9 11 </span><br><span class="line"> 9 </span><br><span class="line">10 </span><br><span class="line">11 </span><br><span class="line">注意：%后面指定数字的位数默认是%g，%3g那么数字位数不足部分是空格。</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -f &quot;str%03g&quot; 9 11 </span><br><span class="line">str009</span><br><span class="line">str010</span><br><span class="line">str011</span><br><span class="line">注意：这样的话数字位数不足部分是0，%前面制定字符串。</span><br></pre></td></tr></table></figure><p><strong>-w选项：指定输出数字同宽</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -w 98 101</span><br><span class="line">098 </span><br><span class="line">099</span><br><span class="line">100 </span><br><span class="line">101 </span><br><span class="line">注意：不能和-f一起用，输出是同宽的。</span><br></pre></td></tr></table></figure></p><p><strong>s选项：指定分隔符（默认是回车）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -s&quot;    &quot; -f&quot;str%03g&quot; 9 11     </span><br><span class="line">str009    str010    str011</span><br></pre></td></tr></table></figure></p><p><strong>指定\n作为分隔符号：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -s&quot;`echo -e &quot;/t&quot;`&quot; 9 11</span><br><span class="line">9/t10/t11</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;seq命令用于产生从某个数到另外一个数之间的所有整数。&lt;/p&gt;
+&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table
       
     
     </summary>
