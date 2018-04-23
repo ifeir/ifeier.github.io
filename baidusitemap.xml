@@ -3,9 +3,297 @@
 
 
     
+  <url>
+    <loc>http://blog.zhangqifei.top/2017/09/28/%E9%80%9A%E7%9F%A5/%E6%B3%A8%E6%84%8F%E5%95%A6%EF%BC%81/</loc>
+    <lastmod>2018-04-23T07:24:33.650Z</lastmod>
+    <data>
+        <display>
+        <title>注意啦!</title>
+        <pubTime>2017-09-28T07:12:09.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="通知" url="http://blog.zhangqifei.top/categories/%E9%80%9A%E7%9F%A5/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
-    <loc>http://blog.zhangqifei.top/2017/03/05/Linux%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E6%97%B6%E9%97%B4%E7%BA%BF2017%E5%B9%B4%E7%89%88%E6%9C%AC/</loc>
+    <loc>http://blog.zhangqifei.top/2017/02/08/%E5%B7%A5%E5%85%B7/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%80%E7%89%9B%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%B8%80%20Vimium/</loc>
+    <lastmod>2018-04-23T07:12:34.107Z</lastmod>
+    <data>
+        <display>
+        <title>Chrome浏览器最牛插件之一 Vimium</title>
+        <pubTime>2017-02-08T00:33:59.000Z</pubTime>
+        
+        <tag>Chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="浏览器" url="http://blog.zhangqifei.top/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2017/10/09/%E9%9A%8F%E7%AC%94/%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E6%97%B6%E9%97%B4/</loc>
+    <lastmod>2018-04-23T07:12:14.462Z</lastmod>
+    <data>
+        <display>
+        <title>如何管理自己的时间？</title>
+        <pubTime>2017-10-09T04:35:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2017/05/05/%E9%9A%8F%E7%AC%94/%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4%E7%9A%84http%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2018-04-23T07:12:14.436Z</lastmod>
+    <data>
+        <display>
+        <title>一次完整的http请求处理过程</title>
+        <pubTime>2017-05-05T01:12:22.000Z</pubTime>
+        
+        <tag>HTTP</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.zhangqifei.top/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2016/03/04/%E9%9A%8F%E7%AC%94/linux%20%E5%AE%89%E8%A3%85rz%E5%92%8Csz%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-04-23T07:12:14.373Z</lastmod>
+    <data>
+        <display>
+        <title>linux 安装rz和sz命令</title>
+        <pubTime>2016-03-04T01:42:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2018/03/05/%E9%9A%8F%E7%AC%94/%E4%B8%80%E6%AC%A1%E8%AF%B4%E6%B8%85%E4%BB%80%E4%B9%88%E6%98%AF%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%9F/</loc>
+    <lastmod>2018-04-23T07:12:14.352Z</lastmod>
+    <data>
+        <display>
+        <title>一次说清什么是正向代理，什么是反向代理？</title>
+        <pubTime>2018-03-05T01:42:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2017/09/04/%E9%9A%8F%E7%AC%94/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/</loc>
+    <lastmod>2018-04-23T07:12:14.323Z</lastmod>
+    <data>
+        <display>
+        <title>如何阅读一本书？</title>
+        <pubTime>2017-09-04T01:35:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2016/04/04/%E9%9A%8F%E7%AC%94/HTTPS%E5%92%8CHTTP%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/</loc>
+    <lastmod>2018-04-23T07:12:14.291Z</lastmod>
+    <data>
+        <display>
+        <title>HTTPS和HTTP的区别？</title>
+        <pubTime>2016-04-04T01:41:22.000Z</pubTime>
+        
+        <tag>HTTP</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2018/03/04/%E9%9A%8F%E7%AC%94/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%80%E5%AE%9A%E8%A6%81%E7%94%A8Linux%EF%BC%9F/</loc>
+    <lastmod>2018-04-23T07:12:14.222Z</lastmod>
+    <data>
+        <display>
+        <title>程序员为什么一定要用Linux？</title>
+        <pubTime>2018-03-04T01:41:22.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="随笔" url="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2015/09/30/%E5%B7%A5%E5%85%B7/markdown/</loc>
+    <lastmod>2018-04-23T07:11:04.557Z</lastmod>
+    <data>
+        <display>
+        <title>笔记所使用的markdown语法</title>
+        <pubTime>2015-09-30T03:10:28.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://blog.zhangqifei.top/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2018/01/08/%E5%B7%A5%E5%85%B7/%E5%90%90%E8%A1%80%E6%8E%A8%E8%8D%90%E7%8F%8D%E8%97%8F%E7%9A%84Chrome%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2018-04-23T07:11:04.528Z</lastmod>
+    <data>
+        <display>
+        <title>吐血推荐珍藏的Chrome插件</title>
+        <pubTime>2018-01-08T00:33:59.000Z</pubTime>
+        
+        <tag>Chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="浏览器" url="http://blog.zhangqifei.top/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2016/04/06/%E5%B7%A5%E5%85%B7/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%8C%E8%B5%B6%E7%B4%A7%E6%94%B6%E8%97%8F%E5%90%A7%EF%BC%81%EF%BC%81/</loc>
+    <lastmod>2018-04-23T07:11:04.499Z</lastmod>
+    <data>
+        <display>
+        <title>Git 常用命令大全，赶紧收藏吧！！</title>
+        <pubTime>2016-04-06T01:41:22.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://blog.zhangqifei.top/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2016/07/06/%E5%B7%A5%E5%85%B7/ASCII%E5%AF%B9%E7%85%A7%E8%A1%A8/</loc>
+    <lastmod>2018-04-23T07:11:04.469Z</lastmod>
+    <data>
+        <display>
+        <title>ASCII对照表</title>
+        <pubTime>2016-07-06T01:41:22.000Z</pubTime>
+        
+        <tag>ASCII</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://blog.zhangqifei.top/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2016/01/04/%E5%B7%A5%E5%85%B7/%E7%8A%B6%E6%80%81%E7%A0%81%E5%A4%A7%E5%85%A8/</loc>
+    <lastmod>2018-04-23T07:11:04.439Z</lastmod>
+    <data>
+        <display>
+        <title>状态码大全</title>
+        <pubTime>2016-01-04T01:41:22.000Z</pubTime>
+        
+        <tag>状态码</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://blog.zhangqifei.top/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2016/04/04/%E5%B7%A5%E5%85%B7/%E5%85%8D%E8%B4%B9IP%E5%9C%B0%E5%9D%80%E6%9F%A5%E8%AF%A2API%E6%8E%A5%E5%8F%A3/</loc>
+    <lastmod>2018-04-23T07:11:04.392Z</lastmod>
+    <data>
+        <display>
+        <title>免费IP地址查询API接口</title>
+        <pubTime>2016-04-04T01:41:22.000Z</pubTime>
+        
+        <tag>API接口</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://blog.zhangqifei.top/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://blog.zhangqifei.top/2017/03/05/linux/Linux%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E6%97%B6%E9%97%B4%E7%BA%BF2017%E5%B9%B4%E7%89%88%E6%9C%AC/</loc>
     <lastmod>2018-04-22T09:30:14.906Z</lastmod>
     <data>
         <display>
@@ -25,7 +313,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2017/05/06/Systemd%20%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%EF%BC%9A%E5%91%BD%E4%BB%A4%E7%AF%87/</loc>
+    <loc>http://blog.zhangqifei.top/2017/05/06/linux/Systemd%20%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%EF%BC%9A%E5%91%BD%E4%BB%A4%E7%AF%87/</loc>
     <lastmod>2018-04-22T09:30:14.835Z</lastmod>
     <data>
         <display>
@@ -45,7 +333,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2017/03/04/Linux%E9%98%B2%E7%81%AB%E5%A2%99/</loc>
+    <loc>http://blog.zhangqifei.top/2017/03/04/linux/Linux%E9%98%B2%E7%81%AB%E5%A2%99/</loc>
     <lastmod>2018-04-22T09:29:33.353Z</lastmod>
     <data>
         <display>
@@ -65,7 +353,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/03/05/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</loc>
+    <loc>http://blog.zhangqifei.top/2016/03/05/linux/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</loc>
     <lastmod>2018-04-22T09:29:33.308Z</lastmod>
     <data>
         <display>
@@ -85,7 +373,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/06/06/CentOS%EF%BC%886%E3%80%817%EF%BC%89%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D(hostname)/</loc>
+    <loc>http://blog.zhangqifei.top/2016/06/06/linux/CentOS%EF%BC%886%E3%80%817%EF%BC%89%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D(hostname)/</loc>
     <lastmod>2018-04-22T09:29:33.283Z</lastmod>
     <data>
         <display>
@@ -105,7 +393,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-bc/</loc>
+    <loc>http://blog.zhangqifei.top/2016/07/06/linux/linux%E5%91%BD%E4%BB%A4-bc/</loc>
     <lastmod>2018-04-22T09:29:33.238Z</lastmod>
     <data>
         <display>
@@ -125,7 +413,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2017/08/10/ansible%20puppet%20saltstack%E4%B8%89%E6%AC%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
+    <loc>http://blog.zhangqifei.top/2017/08/10/linux/ansible%20puppet%20saltstack%E4%B8%89%E6%AC%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
     <lastmod>2018-04-22T09:29:33.219Z</lastmod>
     <data>
         <display>
@@ -146,7 +434,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2017/08/06/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7saltstack/</loc>
+    <loc>http://blog.zhangqifei.top/2017/08/06/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7saltstack/</loc>
     <lastmod>2018-04-22T09:29:33.156Z</lastmod>
     <data>
         <display>
@@ -169,7 +457,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-head/</loc>
+    <loc>http://blog.zhangqifei.top/2016/07/06/linux/linux%E5%91%BD%E4%BB%A4-head/</loc>
     <lastmod>2018-04-22T09:29:33.121Z</lastmod>
     <data>
         <display>
@@ -189,7 +477,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-grep/</loc>
+    <loc>http://blog.zhangqifei.top/2016/07/06/linux/linux%E5%91%BD%E4%BB%A4-grep/</loc>
     <lastmod>2018-04-22T09:29:33.091Z</lastmod>
     <data>
         <display>
@@ -209,7 +497,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2017/06/06/8%E5%88%86%E9%92%9F%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E6%90%9E%E6%87%82Nginx/</loc>
+    <loc>http://blog.zhangqifei.top/2017/06/06/linux/8%E5%88%86%E9%92%9F%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E6%90%9E%E6%87%82Nginx/</loc>
     <lastmod>2018-04-22T09:29:33.065Z</lastmod>
     <data>
         <display>
@@ -229,7 +517,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD-socket/</loc>
+    <loc>http://blog.zhangqifei.top/2016/04/04/linux/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD-socket/</loc>
     <lastmod>2018-04-22T09:29:33.034Z</lastmod>
     <data>
         <display>
@@ -247,7 +535,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2017/08/07/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7puppet/</loc>
+    <loc>http://blog.zhangqifei.top/2017/08/07/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7puppet/</loc>
     <lastmod>2018-04-22T09:29:33.000Z</lastmod>
     <data>
         <display>
@@ -270,7 +558,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/03/06/linux%E7%A6%81%E6%AD%A2ping%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%90%AFping%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    <loc>http://blog.zhangqifei.top/2016/03/06/linux/linux%E7%A6%81%E6%AD%A2ping%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%90%AFping%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2018-04-22T09:29:32.967Z</lastmod>
     <data>
         <display>
@@ -290,7 +578,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-test/</loc>
+    <loc>http://blog.zhangqifei.top/2016/07/06/linux/linux%E5%91%BD%E4%BB%A4-test/</loc>
     <lastmod>2018-04-22T09:29:32.910Z</lastmod>
     <data>
         <display>
@@ -310,7 +598,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/05/06/apache2.4%E7%89%88%E6%9C%AC%E4%B8%8E2.2%E7%89%88%E6%9C%AC%E7%9A%84%E5%B7%AE%E5%BC%82/</loc>
+    <loc>http://blog.zhangqifei.top/2016/05/06/linux/apache2.4%E7%89%88%E6%9C%AC%E4%B8%8E2.2%E7%89%88%E6%9C%AC%E7%9A%84%E5%B7%AE%E5%BC%82/</loc>
     <lastmod>2018-04-22T09:29:32.872Z</lastmod>
     <data>
         <display>
@@ -330,7 +618,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2017/08/09/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7ansible/</loc>
+    <loc>http://blog.zhangqifei.top/2017/08/09/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7ansible/</loc>
     <lastmod>2018-04-22T09:29:32.834Z</lastmod>
     <data>
         <display>
@@ -353,7 +641,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-seq/</loc>
+    <loc>http://blog.zhangqifei.top/2016/07/06/linux/linux%E5%91%BD%E4%BB%A4-seq/</loc>
     <lastmod>2018-04-22T09:29:32.809Z</lastmod>
     <data>
         <display>
@@ -373,7 +661,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/09/06/%E8%87%AA%E5%BB%BACA%E8%AE%A4%E8%AF%81%E5%92%8C%E8%AF%81%E4%B9%A6/</loc>
+    <loc>http://blog.zhangqifei.top/2016/09/06/linux/%E8%87%AA%E5%BB%BACA%E8%AE%A4%E8%AF%81%E5%92%8C%E8%AF%81%E4%B9%A6/</loc>
     <lastmod>2018-04-22T09:29:32.785Z</lastmod>
     <data>
         <display>
@@ -393,7 +681,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/06/06/ab%E5%91%BD%E4%BB%A4%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://blog.zhangqifei.top/2016/06/06/linux/ab%E5%91%BD%E4%BB%A4%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2018-04-22T09:29:32.756Z</lastmod>
     <data>
         <display>
@@ -413,7 +701,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-cat/</loc>
+    <loc>http://blog.zhangqifei.top/2016/07/06/linux/linux%E5%91%BD%E4%BB%A4-cat/</loc>
     <lastmod>2018-04-22T09:29:32.718Z</lastmod>
     <data>
         <display>
@@ -433,7 +721,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-echo/</loc>
+    <loc>http://blog.zhangqifei.top/2016/07/06/linux/linux%E5%91%BD%E4%BB%A4-echo/</loc>
     <lastmod>2018-04-22T09:29:32.654Z</lastmod>
     <data>
         <display>
@@ -453,7 +741,7 @@
 
     
   <url>
-    <loc>http://blog.zhangqifei.top/2018/02/07/%E9%87%91%E4%B8%9D%E9%9B%80%E5%8F%91%E5%B8%83%E3%80%81%E6%BB%9A%E5%8A%A8%E5%8F%91%E5%B8%83%E3%80%81%E8%93%9D%E7%BB%BF%E5%8F%91%E5%B8%83%E5%88%B0%E5%BA%95%E6%9C%89%E4%BB%80%E4%B9%88%E5%B7%AE%E5%88%AB%EF%BC%9F%E5%85%B3%E9%94%AE%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</loc>
+    <loc>http://blog.zhangqifei.top/2018/02/07/linux/%E9%87%91%E4%B8%9D%E9%9B%80%E5%8F%91%E5%B8%83%E3%80%81%E6%BB%9A%E5%8A%A8%E5%8F%91%E5%B8%83%E3%80%81%E8%93%9D%E7%BB%BF%E5%8F%91%E5%B8%83%E5%88%B0%E5%BA%95%E6%9C%89%E4%BB%80%E4%B9%88%E5%B7%AE%E5%88%AB%EF%BC%9F%E5%85%B3%E9%94%AE%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</loc>
     <lastmod>2018-04-22T09:24:20.026Z</lastmod>
     <data>
         <display>
@@ -474,7 +762,7 @@
     
     
   <url>
-    <loc>http://blog.zhangqifei.top/2017/01/07/CentOS7%E5%90%AF%E5%8A%A8%E5%8F%8A%E6%8E%92%E9%94%99/</loc>
+    <loc>http://blog.zhangqifei.top/2017/01/07/linux/CentOS7%E5%90%AF%E5%8A%A8%E5%8F%8A%E6%8E%92%E9%94%99/</loc>
     <lastmod>2018-04-22T08:27:28.687Z</lastmod>
     <data>
         <display>

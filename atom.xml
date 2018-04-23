@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhangqifei.top/"/>
-  <updated>2018-04-22T09:24:20.026Z</updated>
+  <updated>2018-04-23T07:12:14.352Z</updated>
   <id>http://blog.zhangqifei.top/</id>
   
   <author>
@@ -17,9 +17,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一次说清什么是正向代理，什么是反向代理？</title>
+    <link href="http://blog.zhangqifei.top/2018/03/05/%E9%9A%8F%E7%AC%94/%E4%B8%80%E6%AC%A1%E8%AF%B4%E6%B8%85%E4%BB%80%E4%B9%88%E6%98%AF%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%9F/"/>
+    <id>http://blog.zhangqifei.top/2018/03/05/随笔/一次说清什么是正向代理，什么是反向代理？/</id>
+    <published>2018-03-05T01:42:22.000Z</published>
+    <updated>2018-04-23T07:12:14.352Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>比如你现在缺钱，想找马云爸爸去借钱，可想而知人家可能鸟都不鸟你，到最后碰一鼻子灰借不到钱。不过你认识你家隔壁老王，而老王认识马云同志，而且关系还很好。这时候你托老王去找马云借钱，当然这事最后成了，你从马云那里借到了500万！这时候马云并不知道钱是你借的，只知道这钱是老王借的。最后由老王把钱转交给你。在这里，老王就充当了一个重要的角色：代理。</p><p>此时的代理，就是我们常说的正向代理。代理客户端去请求服务器，隐藏了真实客户端，服务器并不知道真实的客户端是谁。正向代理应用最广泛的莫过于现在的某些“科学上网工具”，你访问不了谷歌、Facebook的时候，你可以在国外搭建一台代理服务器，代理你访问，代理服务器再把请求到的数据转交给你，你就可以看到内容了</p><center><br><img src="http://zhangqifei.top/picture/httpd/20180307210726782.png" alt="正向代理"><br></center><p><strong>相对专业点解释：</strong></p><p>正向代理是一个位于客户端和原始服务器(origin server)之间的服务器，为了从原始服务器取得内容，客户端向代理发送一个请求并指定目标(原始服务器)，然后代理向原始服务器转交请求并将获得的内容返回给客户端。客户端必须要进行一些特别的设置才能使用正向代理。</p><h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>比如你现在很无聊，想找人聊天，这时候你拨通了联通客服10010电话，联通的总机可能随机给你分配一个闲置的客服给你接通。这时候你如愿以偿的和客服聊了起来，问了问她目前有没有结婚、有没有对象、家住哪里、她的微信号、她的手机号。。。</p><p>此时联通总机充当的角色就是反向代理，你只知道和客服接通并聊了起来，具体为什么会接通这个客服MM，怎么接通的，你并不知道。</p><p>反向代理隐藏了真正的服务端，就像你每天使用百度的时候，只知道敲打<a href="http://www.baidu.com就可以打开百度搜索页面，但背后成千上万台百度服务器具体是哪一台为我们服务的，我们并不知道。我们只知道这个代理服务器，它会把我们的请求转发到真实为我们服务的那台服务器那里去。" target="_blank" rel="noopener">www.baidu.com就可以打开百度搜索页面，但背后成千上万台百度服务器具体是哪一台为我们服务的，我们并不知道。我们只知道这个代理服务器，它会把我们的请求转发到真实为我们服务的那台服务器那里去。</a></p><p>软件层面一般常用Nginx来做反向代理服务器，它的性能非常好，用来做负载均衡。</p><center><br><img src="http://zhangqifei.top/picture/httpd/20180307210840303.png" alt="反向代理"><br></center><p><strong>相对专业点解释：</strong></p><ul><li>反向代理（Reverse Proxy）方式是指以代理服务器来接受Internet上的连接请求，然后将请求转发给内部网络上的服务器；并将从服务器上得到的结果返回给Internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。</li><li>通常的代理服务器，只用于代理内部网络对Internet的连接请求，客户机必须指定代理服务器,并将本来要直接发送到Web服务器上的http请求发送 到代理服务器中。当一个代理服务器能够代理外部网络上的主机，访问内部网络时，这种代理服务的方式称为反向代理服务。</li></ul><blockquote><p>综上所述：正向代理代理对象是客户端，反向代理代理对象是服务端。</p></blockquote><h3 id="两者区别"><a href="#两者区别" class="headerlink" title="两者区别"></a>两者区别</h3><p><center><br><img src="http://zhangqifei.top/picture/httpd/20180307211940945" alt="这里写图片描述"><br></center><br><strong>从用途 上来讲：</strong></p><ul><li>正向代理的典型用途是为在防火墙内的局域网客户端提供访问Internet的途径。正向代理还可以使用缓冲特性减少网络使用率。反向代理的典型用途是将 防火墙后面的服务器提供给Internet用户访问。反向代理还可以为后端的多台服务器提供负载平衡，或为后端较慢的服务器提供缓冲服务。</li><li>另外，反向代理还可以启用高级URL策略和管理技术，从而使处于不同web服务器系统的web页面同时存在于同一个URL空间下。</li></ul><p><strong>从安全性 来讲：</strong></p><ul><li>正向代理允许客户端通过它访问任意网站并且隐藏客户端自身，因此你必须采取安全措施以确保仅为经过授权的客户端提供服务。</li><li>反向代理对外都是透明的，访问者并不知道自己访问的是一个代理。</li></ul><blockquote><p>最后一句话总结：<br>打个比方，有a,b,c三个人<br>正向代理是： a通过b向C借钱，a知道c的存在 。<br>反向代理是： a向b借钱，b又向C借，a不知道c的存在。</p></blockquote><p><a href="https://baijiahao.baidu.com/s?id=1566988836622068&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">原文链接</a> 之所以转载这篇文章，是因为例子举的太好了，非常适合初学者理解。但是样式有点乱 自己稍微整理了下。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;正向代理&quot;&gt;&lt;a href=&quot;#正向代理&quot; class=&quot;headerlink&quot; title=&quot;正向代理&quot;&gt;&lt;/a&gt;正向代理&lt;/h3&gt;&lt;p&gt;比如你现在缺钱，想找马云爸爸去借钱，可想而知人家可能鸟都不鸟你，到最后碰一鼻子灰借不到钱。不过你认识你家隔壁老王，而老王认识
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>程序员为什么一定要用Linux？</title>
+    <link href="http://blog.zhangqifei.top/2018/03/04/%E9%9A%8F%E7%AC%94/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%80%E5%AE%9A%E8%A6%81%E7%94%A8Linux%EF%BC%9F/"/>
+    <id>http://blog.zhangqifei.top/2018/03/04/随笔/程序员为什么一定要用Linux？/</id>
+    <published>2018-03-04T01:41:22.000Z</published>
+    <updated>2018-04-23T07:12:14.222Z</updated>
+    
+    <content type="html"><![CDATA[<p>大多数人推荐Linux，基本上都会说Linux让你更高效、更优秀。</p><p><strong>然而工具只是工具。</strong></p><p><strong>然而工具只是工具。</strong></p><p><strong>然而工具只是工具。</strong></p><p>优秀程序员和不优秀程序员的区别首先是态度上的区别。</p><p>他们有自己的理想，思考很多，不管是项目开始之前还是在项目进行中，项目完成之后也会进行总结。</p><p>他们对待问题比较严谨，思考比较全面，在动手写代码之前肯定经过了一定的思考，对可能引入的问题进行预估。</p><p>而不优秀的程序员对待问题比较随意，也就是态度上不是那么认真，代码写的也比较随意：他们不会意识到他们的代码已经污染了整个项目。</p><p>除了态度上的不同，在能力上也有很大的差别。</p><p>遇到比较难缠的问题，优秀的程序员总是能从原理出发，一针见血的看出问题的真正原因，进而解决问题，而不优秀的程序员总是停留在表面——认为Linux会把你变得优秀就是停留在表面，只有你自己才能把你变优秀。</p><p><strong>那么Linux的好处到底在哪里呢？</strong></p><h3 id="1-开源"><a href="#1-开源" class="headerlink" title="1.开源"></a>1.开源</h3><blockquote><p>这个我想不用解释。</p></blockquote><h3 id="2-多用户、多任务、多线程"><a href="#2-多用户、多任务、多线程" class="headerlink" title="2.多用户、多任务、多线程"></a>2.多用户、多任务、多线程</h3><blockquote><p>Linux系统同时可以支持多个用户，每个用户对自己的文件设备有特殊的权利，能够保证各用户之间互不干扰，就像手机开了助手一样，同时登陆多个qq账号，当硬件配置非常高时，每个用户还可以同时执行多个任务、多个线程同时工作、提高效率，简直是完美的一塌糊涂，单凭多用户而言就完爆其他操作系统。</p></blockquote><h3 id="3-稳定性和高效性"><a href="#3-稳定性和高效性" class="headerlink" title="3.稳定性和高效性"></a>3.稳定性和高效性</h3><blockquote><p>你也许会听到Windows服务器长时间运行而突然宕机，但你绝不会听到Linux系统服务器因为长时间不关机会卡死，在Linux上几乎是不会出现这种情况的。Linux服务器可以无休止的运行下去不宕机，因为它继承了Unix卓越的稳定性和高效性。正因为它的稳定才获得了众多用户的青睐，因为它的高效，它的使用范围更加广阔，然而Linux还可以提供一些高可靠性的服务，比如:LNMP、虚拟化、数据库服务等等。</p></blockquote><h3 id="4-安全性和SELinux"><a href="#4-安全性和SELinux" class="headerlink" title="4.安全性和SELinux"></a>4.安全性和SELinux</h3><blockquote><p>其安全性相比其他系统也要安全很多，由于Linux拥有相当庞大的用户和开源社区支持，因此能很快发现系统漏洞，并迅速发布安全补丁及时更新，同时还具有很强的“免疫力”特点，很少受到病毒攻击，对于一个开放式系统而言，在方便用户的同时，很可能存在安全隐患。不过，利用Linux自带防火墙（iptables，firewalld）、入侵检测和安全认证等工具，及时修补系统的漏洞，就能大大提高Linux系统的安全性，让黑客们无机可乘，同时还有安全增强机制SElinux，在linux内核中提供强制访问控制，功能非常全面，能够很好保护系统和服务，不过很多人喜欢把它关闭，这相对安全性就不是很好了。还有Tcp_wrappers也能够提供很好的网络服务访问控制，Linux系统对于用户和文件管理权限的管理也是相当出色的，能够很好的控制权限，保证文件的机密性，也是其他系统无法比拟，所以Linux系统在一定程度上是坚不可摧的。</p></blockquote><h3 id="5-性能优势"><a href="#5-性能优势" class="headerlink" title="5.性能优势"></a>5.性能优势</h3><blockquote><p>由于Linux要保证其稳定性，所以并没有像其它操作系统一样内核如此臃肿庞大、漏洞百出，随着Linux内核的不断更新，不断提升着优势，Linux操作系统能把服务器的硬件优势体现的淋漓尽致，因为Linux系统吸取了Unix系统近1/4世纪发展的经验，最主要的是Linux开放源代码，保证系统稳定性，更好的调用硬件功能，同时还提供了丰富的系统资源工具top，freee，df，vmstat，dmesg，iostat，sar，uptime等，方便查看资源的利用率。</p></blockquote><p>以上这些足够让你投向Linux的怀抱了。当然，除了这些，还有一些说不定道不明的定西，比如：</p><p><font color="#0099ff" size="5" face="黑体">bigger than bigger</font><br>把你的Linux系统拿出去，开始用命令行做点事情。<br>比如说，输入<code>sudo rm -rf /*</code>在外行人看来，非常之酷炫！</p><blockquote><p>文章来源：<a href="https://www.zhihu.com/question/21048284/answer/170226604" target="_blank" rel="noopener">https://www.zhihu.com/question/21048284/answer/170226604</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;大多数人推荐Linux，基本上都会说Linux让你更高效、更优秀。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然而工具只是工具。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然而工具只是工具。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然而工具只是工具。&lt;/strong&gt;&lt;/
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>金丝雀发布、滚动发布、蓝绿发布到底有什么差别？关键点是什么？</title>
-    <link href="http://blog.zhangqifei.top/2018/02/07/%E9%87%91%E4%B8%9D%E9%9B%80%E5%8F%91%E5%B8%83%E3%80%81%E6%BB%9A%E5%8A%A8%E5%8F%91%E5%B8%83%E3%80%81%E8%93%9D%E7%BB%BF%E5%8F%91%E5%B8%83%E5%88%B0%E5%BA%95%E6%9C%89%E4%BB%80%E4%B9%88%E5%B7%AE%E5%88%AB%EF%BC%9F%E5%85%B3%E9%94%AE%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/"/>
-    <id>http://blog.zhangqifei.top/2018/02/07/金丝雀发布、滚动发布、蓝绿发布到底有什么差别？关键点是什么？/</id>
+    <link href="http://blog.zhangqifei.top/2018/02/07/linux/%E9%87%91%E4%B8%9D%E9%9B%80%E5%8F%91%E5%B8%83%E3%80%81%E6%BB%9A%E5%8A%A8%E5%8F%91%E5%B8%83%E3%80%81%E8%93%9D%E7%BB%BF%E5%8F%91%E5%B8%83%E5%88%B0%E5%BA%95%E6%9C%89%E4%BB%80%E4%B9%88%E5%B7%AE%E5%88%AB%EF%BC%9F%E5%85%B3%E9%94%AE%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/"/>
+    <id>http://blog.zhangqifei.top/2018/02/07/linux/金丝雀发布、滚动发布、蓝绿发布到底有什么差别？关键点是什么？/</id>
     <published>2018-02-07T11:42:22.000Z</published>
     <updated>2018-04-22T09:24:20.026Z</updated>
     
@@ -43,9 +92,105 @@
   </entry>
   
   <entry>
+    <title>吐血推荐珍藏的Chrome插件</title>
+    <link href="http://blog.zhangqifei.top/2018/01/08/%E5%B7%A5%E5%85%B7/%E5%90%90%E8%A1%80%E6%8E%A8%E8%8D%90%E7%8F%8D%E8%97%8F%E7%9A%84Chrome%E6%8F%92%E4%BB%B6/"/>
+    <id>http://blog.zhangqifei.top/2018/01/08/工具/吐血推荐珍藏的Chrome插件/</id>
+    <published>2018-01-08T00:33:59.000Z</published>
+    <updated>2018-04-23T07:11:04.528Z</updated>
+    
+    <content type="html"><![CDATA[<p>你应该知道的的Chrome插件！！！</p><h2 id="Momentum"><a href="#Momentum" class="headerlink" title="Momentum"></a>Momentum</h2><p>装逼利器，教你如何优雅的使用Chrome，新打开一个Tab的时候再也不是一片空白，每天一副精美图片，给你们看下我今天的桌面感受下。<a href="https://www.investopedia.com/terms/m/momentum.asp" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/0.png" width="500" height="200" alt="Momentum" align="center"></center><h2 id="OneTab"><a href="#OneTab" class="headerlink" title="OneTab"></a>OneTab</h2><p>　　强烈推荐，使用场景是这样的，我们使用Chrome经常会一次打开好多tab，很多是会用到的，又不舍得关，内存又耗着，这个时候点击下OneTab，直接把所有tab回收，然后每天的历史都给你记录着，接着你可以一键还原某一天的tab，真乃为Chrome而生。<a href="http://chromecj.com/productivity/2014-11/280.html" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/onetab.png" width="500" height="200" alt="OneTab" align="center"></center><h2 id="ZenHub"><a href="#ZenHub" class="headerlink" title="ZenHub"></a>ZenHub</h2><p>ZenHub增压您GitHub上的工作流程.ZenHub是第一个也是唯一的项目管理套件的作品本身内GitHub上;提高您的工作流程，专为初创内置功能，快速移动的工程团队，以及开源社区。该产品是一款浏览器扩展，注入先进的功能，包括实时拖动和拖放发行任务板，通过 1按钮同行的反馈，并直接上传任何文件类型到GitHub的接口支持。 ZenHub可以很容易地集中所有进程到GitHub上，保持你的团队的精益和敏捷。 <a href="https://www.zenhub.com/" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/zenhub.png" width="500" height="200" alt="ZenHub" align="center"></center><h2 id="草料二维码"><a href="#草料二维码" class="headerlink" title="草料二维码"></a>草料二维码</h2><p>点击生成当前网址二维码,草料二维码插件，实现快速获取二维码。<a href="https://cli.im/" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/1.png" width="500" height="200" alt="草料二维码" align="center"></center><h2 id="Adblock-Plus"><a href="#Adblock-Plus" class="headerlink" title="Adblock Plus"></a>Adblock Plus</h2><p>您有没有遇到过在使用chrome浏览器看视频或者是阅读文章的时候突然冒出一个大尺度的广告挡住了您的视线，不过这也可能还算是好的，如果那个大尺度的广告还没有关闭按钮的话我想您可能都有骂人的冲动了吧，而对于一篇自己喜欢的文章或者是喜爱的电影来说又舍不得放弃该怎么办？而今天为大家推荐的这款广告拦截插件：Adblock Plus可以轻松地帮您脱离”困境“。<a href="https://adblockplus.org/zh_CN/" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/adblock.png" width="500" height="200" alt="Adblock" align="center"></center><h2 id="开发工具箱"><a href="#开发工具箱" class="headerlink" title="开发工具箱"></a>开发工具箱</h2><p>功能比较强大，软件开发中常用的一些小工具这里都有，非常方便和全面<br>字符串编码解码 二维码生成 加密解密 HTML/JS/CSS 常用对照表。<a href="http://www.box3.cn/" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/jskf.png" width="500" height="200" alt="开发工具箱" align="center"></center><h2 id="WEB前端助手-FeHelper"><a href="#WEB前端助手-FeHelper" class="headerlink" title="WEB前端助手(FeHelper)"></a>WEB前端助手(FeHelper)</h2><p>FE助手：包括字符串编解码、代码压缩、美化、JSON格式化、正则表达式、时间转换工具、二维码生成与解码、编码规范检测、页面性能检测、页面取色、Ajax接口调试。<a href="http://www.cnplugins.com/devtool/webqianduanzhushoufehelper/" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/FeHelper.png" width="500" height="200" alt="WEB前端助手" align="center"></center><h2 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h2><p>这款网页调试工具不仅可以调试简单的css、html、脚本等简单的网页基本信息，它还可以发送几乎所有类型的HTTP请求！Postman在发送网络HTTP请求方面可以说是Chrome插件类产品中的代表产品之一。<a href="http://chromecj.com/web-development/2014-09/60.html" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/postman.png" width="500" height="200" alt="Postman" align="center"></center><h2 id="skyZIP™-Proxy"><a href="#skyZIP™-Proxy" class="headerlink" title="skyZIP™ Proxy"></a>skyZIP™ Proxy</h2><p>skyZIP浏览器扩展是完美的匿名互联网访问，如VPN服务，可以做更多，更快。skyZIP可以通过使用高性能代理服务器来优化网页，从而减少数据使用量。数据节省约50％.许多网站没有优化 - 但skyZIP正在将图像转码为WebP无损格式，因此产生的图像缩小了80％。<br><a href="https://www.skyzip.de/" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/skyzip.png" width="500" height="200" alt="skyZIP™ Proxy" align="center"></center><h2 id="Listen-1"><a href="#Listen-1" class="headerlink" title="Listen 1"></a>Listen 1</h2><p>我想大部分人对听音乐是强需求吧？如果没有音乐，那么你的生活里将不在有色彩。有人喜欢用网易云音乐、有人喜欢用虾米、QQ 音乐等，但是想大家不可能同时装这么多客户端吧？因为版权的原因，每个在线音乐网站都没有做到完全的曲库，你又不可能把每个音乐网站都买上会员，所以有时候你需要去不同的网站搜索音乐，这个时候请使用 Listen 1，简直不要太良心。界面也有点极客范，堪称程序员专属听歌工具。但是，Listen 1 并没有在 Chrome 应用商店上架，而是以开源的方式放在了 GitHub，只需要下载并让 Chrome 以开发者模式加载即可，安装方式见 GitHub 项目描述。<a href="https://github.com/listen1/listen1_chrome_extension" target="_blank" rel="noopener">链接地址</a></p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/listen1.png" width="500" height="200" alt="Listen" align="center"></center><h2 id="iBookmark-Bookmarks-收藏夹"><a href="#iBookmark-Bookmarks-收藏夹" class="headerlink" title="iBookmark Bookmarks 收藏夹"></a>iBookmark Bookmarks 收藏夹</h2><p>打造最好用的Chrome书签收藏夹插件，特性如下：</p><ol><li>将收藏夹以列表展示，相比树形图不用层层点击，可以直接看到所有网址；</li><li>支持搜索，快速查找；</li><li>支持在某分类下面新建收藏站点；</li><li>点击网址icon图标，可以对该书签进行修改以及删除操作；</li><li>支持最常访问统计，将常用网址置顶；</li><li><p>支持最新添加的网址展示。</p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/ibookmark.png" width="500" height="200" alt="收藏夹" align="center"></center></li></ol><center><h3>持续更新中·······</h3></center>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;你应该知道的的Chrome插件！！！&lt;/p&gt;
+&lt;h2 id=&quot;Momentum&quot;&gt;&lt;a href=&quot;#Momentum&quot; class=&quot;headerlink&quot; title=&quot;Momentum&quot;&gt;&lt;/a&gt;Momentum&lt;/h2&gt;&lt;p&gt;装逼利器，教你如何优雅的使用Chrome
+      
+    
+    </summary>
+    
+      <category term="浏览器" scheme="http://blog.zhangqifei.top/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+    
+      <category term="Chrome" scheme="http://blog.zhangqifei.top/tags/Chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何管理自己的时间？</title>
+    <link href="http://blog.zhangqifei.top/2017/10/09/%E9%9A%8F%E7%AC%94/%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E6%97%B6%E9%97%B4/"/>
+    <id>http://blog.zhangqifei.top/2017/10/09/随笔/如何管理自己的时间/</id>
+    <published>2017-10-09T04:35:22.000Z</published>
+    <updated>2018-04-23T07:12:14.462Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们每天都工作，生活。但有时候，每天都很忙碌，却不知道自己在忙些什么。每个人的时间都是有限的，我不想碌碌无为，终其一生。我需要知道自己做了些什么，为什么做，在哪个时候做。我以《Getting Things Done》与《小强升职记》为主，《番茄工作法》为辅，构建自己的时间管理体系。</p><h1 id="Getting-Things-Done"><a href="#Getting-Things-Done" class="headerlink" title="Getting Things Done"></a>Getting Things Done</h1><p>3个东西：确定目标，横向管理，纵向管理</p><p><img src="https://github.com/hirudy/article/blob/master/image/read/%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E6%97%B6%E9%97%B4/gtd.png?raw=true" alt="Getting Things Done.png"></p><h4 id="确定目标："><a href="#确定目标：" class="headerlink" title="确定目标："></a>确定目标：</h4><p>你如何判断你的目标，确定做事情的优先级？</p><ul><li>与同龄人沟通，一个人有时候会有太大的孤单感</li><li>与高等级比自己强大的人沟通（比如corey）</li><li>自我测验（如小强升职记）</li></ul><h4 id="横向管理"><a href="#横向管理" class="headerlink" title="横向管理"></a>横向管理</h4><p><img src="https://github.com/hirudy/article/blob/master/image/read/%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E6%97%B6%E9%97%B4/gtd_flow.png?raw=true" alt="GTD横向管理流程图"></p><p>这个流程图记录了一件事情如何进入gtd系统，最后被处理的</p><h4 id="纵向管理"><a href="#纵向管理" class="headerlink" title="纵向管理"></a>纵向管理</h4><p>是管理一个比较大的，重要的项目需要做的事情。</p><ul><li>有着自己想达到的目标和原则</li><li>想想可能达到的结果，最好的，最坏的。</li><li>头脑风暴，把跟这个项目关联的，所有信息都记录下来，不做评判</li><li>整理目标原则，整理结果展望，整理头脑风暴信息。</li><li>确定下一步该干什么</li></ul><h4 id="作者任务的观点"><a href="#作者任务的观点" class="headerlink" title="作者任务的观点"></a>作者任务的观点</h4><ul><li>清空大脑（专注）</li><li>生活中只存在两个问题：<ul><li>你知道要达到的目标，但不知道怎么去做？</li><li>你不知道你的目标是什么？</li></ul></li><li>我们的最终目标是把各种工作和情况赶出你的大脑，但绝不丢弃有潜在价值的想法</li></ul><h1 id="小强升职记"><a href="#小强升职记" class="headerlink" title="小强升职记"></a>小强升职记</h1><p>这是一本比较实用的时间管理，个人管理书籍，值得深读，精读，多读。</p><h4 id="寻找种子"><a href="#寻找种子" class="headerlink" title="寻找种子"></a>寻找种子</h4><ul><li>时间日志，找出时间黑洞，找出高效时间段，工作时间段法（基本的时间管理）</li><li>何为重要的事情，寻找自己的价值观，《职业价值观自测表》</li></ul><h4 id="让种子发芽"><a href="#让种子发芽" class="headerlink" title="让种子发芽"></a>让种子发芽</h4><ul><li>四象限法则</li><li>猴子法则：学会说NO, 合理安排时间</li><li>脑袋同时只装一件事情</li><li>gtd</li></ul><h4 id="长出主干和枝桠"><a href="#长出主干和枝桠" class="headerlink" title="长出主干和枝桠"></a>长出主干和枝桠</h4><ul><li>smart原则</li><li>分解</li></ul><h4 id="绿叶充实枝干"><a href="#绿叶充实枝干" class="headerlink" title="绿叶充实枝干"></a>绿叶充实枝干</h4><ul><li>习惯的养成</li></ul><h4 id="摘下够得着的果实"><a href="#摘下够得着的果实" class="headerlink" title="摘下够得着的果实"></a>摘下够得着的果实</h4><ul><li>每日回顾，反思和总结</li><li>处理零时突发事件</li></ul><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h4 id="如何处理中断？"><a href="#如何处理中断？" class="headerlink" title="如何处理中断？"></a>如何处理中断？</h4><p><img src="https://github.com/hirudy/article/blob/master/image/read/%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E8%87%AA%E5%B7%B1%E7%9A%84%E6%97%B6%E9%97%B4/interrupt_deal.png?raw=true" alt="中断处理.png"></p><h1 id="番茄工作法"><a href="#番茄工作法" class="headerlink" title="番茄工作法"></a>番茄工作法</h1><p>该方法，最总要的一个目的是讲一天的时间分成一个个不可分割的原子时间，确保原子时间内，保持高度集中。</p><p>番茄工作法是一套pdca流程（戴明环）</p><h2 id="五个基本问题"><a href="#五个基本问题" class="headerlink" title="五个基本问题"></a>五个基本问题</h2><h4 id="这是一本什么类型的书？"><a href="#这是一本什么类型的书？" class="headerlink" title="这是一本什么类型的书？"></a>这是一本什么类型的书？</h4><p>实用类型</p><h4 id="这本书描述了什么？"><a href="#这本书描述了什么？" class="headerlink" title="这本书描述了什么？"></a>这本书描述了什么？</h4><p>描述了如何运用番茄工作法，使自己如何在一天中专注的做事情。</p><ul><li>计划：早上起来，计划一天做的事情</li><li>跟踪：执行，定闹钟循环的执行（专注工作-休息-专注工作-休息…）</li><li>记录与分析：记录完成情况（记录中断数），分析改进的方式</li><li>可视化：执行改进方式</li></ul><p>在跟踪中，使用一个个番茄时间跟踪完成。</p><h4 id="作者的观点"><a href="#作者的观点" class="headerlink" title="作者的观点"></a>作者的观点</h4><ul><li>一次只干一件事（专注）</li><li>大项目拆分成小项目 </li><li>分清事情优先级</li><li>总结与反思</li><li>说no, 把预估当成承诺</li><li>清空脑子</li><li>树立自信心（ 前怕狼后怕虎，害怕失败和批评）</li><li>没有什么完美主义（完美主义，碍手碍脚）</li><li>今日待办是一种承诺。</li><li>预估，根据历史记录预估，虽然有一些偏差</li></ul><p>番茄工作法是一套pdca流程（戴明环）</p><h4 id="是否有道理？"><a href="#是否有道理？" class="headerlink" title="是否有道理？"></a>是否有道理？</h4><p>感觉更gtd说的比较像，只是更加专注于每一天的处理控制。</p><blockquote><p>番茄工作法是一套pdca流程（戴明环）</p></blockquote><h4 id="自身经验"><a href="#自身经验" class="headerlink" title="自身经验"></a>自身经验</h4><p>不会做时间管理，真在寻找一种合适自己的方式。感觉该方法比较死板。</p><h4 id="对我的用处"><a href="#对我的用处" class="headerlink" title="对我的用处"></a>对我的用处</h4><ul><li>看该方法是否适合我</li><li>结合gtd构建自己的时间管理系统</li></ul><h2 id="重要句子"><a href="#重要句子" class="headerlink" title="重要句子"></a>重要句子</h2><p>已在作者观点与书的描述中，提炼总结</p><h2 id="提问"><a href="#提问" class="headerlink" title="提问"></a>提问</h2><h4 id="如何处理中断？-1"><a href="#如何处理中断？-1" class="headerlink" title="如何处理中断？"></a>如何处理中断？</h4><p>中断分为内部中断和外部中断。<br>根据事情的紧急情况做区分。</p><ul><li>不紧急：记录在收集箱中，继续当前番茄时间，延后分类处理</li><li>紧急：作废当前番茄时间，处理紧急事情。</li></ul><h4 id="如何预估一个任务需要的时间？"><a href="#如何预估一个任务需要的时间？" class="headerlink" title="如何预估一个任务需要的时间？"></a>如何预估一个任务需要的时间？</h4><p>根据历史预估，然后当天总结反馈。调整，再预估，迭代处理。</p><h1 id="我的时间管理"><a href="#我的时间管理" class="headerlink" title="我的时间管理"></a>我的时间管理</h1><ul><li>确定自己的方向目标</li><li>用滴答清单，在收集箱中随时记录想到的东西</li><li>早上坐地铁，想想今天的事情</li><li>根据目标确定每一天/每一周/每一月的重要事情（四象限法则）</li><li>将复杂项目分解，成具体的可执行的下一步行动</li><li>每一天专注，我不适合使用番茄法。从清单中拿出一件事情，中断根据重要情况，紧急情况做适当处理，参加《小强升职记》中老付的处理方式</li><li>晚上回去，想想今天做了什么，为什么做？有什么改进的地方。</li></ul><p>向往着更好的生活，更自由的时间，我一直在这条路上奔跑，good luck。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我们每天都工作，生活。但有时候，每天都很忙碌，却不知道自己在忙些什么。每个人的时间都是有限的，我不想碌碌无为，终其一生。我需要知道自己做了些什么，为什么做，在哪个时候做。我以《Getting Things Done》与《小强升职记》为主，《番茄工作法》为辅，构建自己的时间管
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>注意啦!</title>
+    <link href="http://blog.zhangqifei.top/2017/09/28/%E9%80%9A%E7%9F%A5/%E6%B3%A8%E6%84%8F%E5%95%A6%EF%BC%81/"/>
+    <id>http://blog.zhangqifei.top/2017/09/28/通知/注意啦！/</id>
+    <published>2017-09-28T07:12:09.000Z</published>
+    <updated>2018-04-23T07:24:33.650Z</updated>
+    
+    <content type="html"><![CDATA[<p>CSDN博客地址为： <a href="https://blog.csdn.net/qq_37187976/" target="_blank" rel="noopener">https://blog.csdn.net/qq_37187976/</a> 原有文章不迁移。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;CSDN博客地址为： &lt;a href=&quot;https://blog.csdn.net/qq_37187976/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/qq_37187976/&lt;/a&gt; 原有文章不迁移。&lt;/p
+      
+    
+    </summary>
+    
+      <category term="通知" scheme="http://blog.zhangqifei.top/categories/%E9%80%9A%E7%9F%A5/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何阅读一本书？</title>
+    <link href="http://blog.zhangqifei.top/2017/09/04/%E9%9A%8F%E7%AC%94/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/"/>
+    <id>http://blog.zhangqifei.top/2017/09/04/随笔/如何阅读一本书/</id>
+    <published>2017-09-04T01:35:22.000Z</published>
+    <updated>2018-04-23T07:12:14.323Z</updated>
+    
+    <content type="html"><![CDATA[<p>工欲善其事必先利其器，对于我们这些已经脱离了学校的指导学习的热，如果想要不断提高自己，就必须学会自我驱动学习。在自我驱动学习中，书籍成为我们获取知识的重要途径。如何从一本书中汲取知识成为重中之重。</p><p>我以艾德勒的《如何阅读一本书》为基本框架，以赵周的《这样读书就够了》与秋叶的《如何高效读懂一本书》为辅，构建我的读书体系。</p><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>一图胜千言<br><img src="https://github.com/hirudy/article/blob/master/image/read/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93.png?raw=true" alt="如何阅读个人总结"></p><hr><h1 id="读《如何阅读一本书》"><a href="#读《如何阅读一本书》" class="headerlink" title="读《如何阅读一本书》"></a>读《如何阅读一本书》</h1><p>精读，分析阅读。</p><h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="https://github.com/hirudy/article/blob/master/image/read/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6.png?raw=true" alt="如何阅读一本书"></p><h2 id="五个基本问题"><a href="#五个基本问题" class="headerlink" title="五个基本问题"></a>五个基本问题</h2><h4 id="1-这本书什么类型？"><a href="#1-这本书什么类型？" class="headerlink" title="1. 这本书什么类型？"></a>1. 这本书什么类型？</h4><p>实用类型，指导类型，方法论</p><h4 id="2-这本书说了什么？"><a href="#2-这本书说了什么？" class="headerlink" title="2. 这本书说了什么？"></a>2. 这本书说了什么？</h4><p>阅读的价值，阅读的四个层次（基础阅读，检视阅读，分析阅读，主题阅读），他们成包含关系。以及如何做笔记等等</p><h4 id="3-作者观点是？"><a href="#3-作者观点是？" class="headerlink" title="3. 作者观点是？"></a>3. 作者观点是？</h4><p>阅读使人灵活。阅读要主动阅读（提问题，找答案）。</p><h4 id="4-所得是否有道理，还是部分有道理？"><a href="#4-所得是否有道理，还是部分有道理？" class="headerlink" title="4. 所得是否有道理，还是部分有道理？"></a>4. 所得是否有道理，还是部分有道理？</h4><ul><li>比较赞同阅读分层结构。分析阅读与对比阅读。</li><li>有点啰嗦，一个东西不同说法如“要理性判断，不做无理的辩驳”与“尊重知识与个人意见的不同，在做任何评判之前找到理论依据”。</li><li>比较适用于精读一本书或建立某个主题的知识体系。</li><li>这么读，时间成本有点高。</li></ul><h4 id="5-对我有什么价值？我怎么运用？"><a href="#5-对我有什么价值？我怎么运用？" class="headerlink" title="5. 对我有什么价值？我怎么运用？"></a>5. 对我有什么价值？我怎么运用？</h4><ul><li>有一个较为系统的读书方法。全局观。<ul><li>基础阅读，读书识字。</li><li>检视阅读，确定阅读价值与作者的观点，这里需要确定是否有价值，作者大概说了什么。</li><li>分析阅读，确定骨架，主旨，事实上，包含检视阅读。输出思维导图，一些重要思想与主旨。评判作者对与否</li><li>主题阅读，没有完美的书，不听信一家之言。完成一类主题的思维导图输出，构建该主题的知识骨架/框架。如同有招到无招的境界。</li></ul></li><li>构建一个主题（如数据库，摄影等等）的知识体系的方法，就用这种方式。</li></ul><h2 id="重要语句摘录"><a href="#重要语句摘录" class="headerlink" title="重要语句摘录"></a>重要语句摘录</h2><ul><li>阅读技巧不仅仅可以运用于书籍，还可以运用于其他的地方，如报纸，杂志，文章，新闻，甚至是广告。</li><li>一个技能或一个习惯，都是由一系列的动作组成。 为了忘掉这些单一的动作，一开始你必须先学会每一个动作。</li><li>思考、感觉、想象是主动阅读（多提问题，然后寻找答案）的重要组成部分。</li></ul><h2 id="自问自答"><a href="#自问自答" class="headerlink" title="自问自答"></a>自问自答</h2><h4 id="1-第一个主要议题是什么"><a href="#1-第一个主要议题是什么" class="headerlink" title="1. 第一个主要议题是什么"></a>1. 第一个主要议题是什么</h4><p>自我管理的阅读者</p><h4 id="2-第二个主要议题"><a href="#2-第二个主要议题" class="headerlink" title="2. 第二个主要议题"></a>2. 第二个主要议题</h4><p>主动阅读的四个基本问题</p><h4 id="3-如何对书籍分类？"><a href="#3-如何对书籍分类？" class="headerlink" title="3. 如何对书籍分类？"></a>3. 如何对书籍分类？</h4><p>我觉得应该根据用途来区分，毕竟学以致用</p><h4 id="4-检视阅读的两个阶段是在什么时候完成？"><a href="#4-检视阅读的两个阶段是在什么时候完成？" class="headerlink" title="4. 检视阅读的两个阶段是在什么时候完成？"></a>4. 检视阅读的两个阶段是在什么时候完成？</h4><p>第一个阶段，拿到一本新书确认是否有读的必要和价值。<br>第二个阶段，确认可以读，完成一遍粗读，知道在讲什么。</p><h4 id="5-分析阅读的几个阶段是并行完成？"><a href="#5-分析阅读的几个阶段是并行完成？" class="headerlink" title="5. 分析阅读的几个阶段是并行完成？"></a>5. 分析阅读的几个阶段是并行完成？</h4><p>第一二个阶段，如果可能，应该在检视阅读中完成。<br>第三个阶段需要阅读完成，一定思考，理解后。</p><h4 id="6-主题阅读是主题分享？"><a href="#6-主题阅读是主题分享？" class="headerlink" title="6. 主题阅读是主题分享？"></a>6. 主题阅读是主题分享？</h4><p>请一个主题的若干作者一起来讨论一个主题。 分享沙龙<br>无招胜有招。</p><hr><h1 id="读《这样读书就够了》"><a href="#读《这样读书就够了》" class="headerlink" title="读《这样读书就够了》"></a>读《这样读书就够了》</h1><p>检视阅读，粗读</p><h2 id="思维导图-1"><a href="#思维导图-1" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="https://github.com/hirudy/article/blob/master/image/read/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/%E8%BF%99%E6%A0%B7%E8%AF%BB%E4%B9%A6%E5%B0%B1%E5%A4%9F%E4%BA%86.png?raw=true" alt="这样读书就够了"></p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h4 id="1-这本书什么类型？这本书说了什么？"><a href="#1-这本书什么类型？这本书说了什么？" class="headerlink" title="1. 这本书什么类型？这本书说了什么？"></a>1. 这本书什么类型？这本书说了什么？</h4><ul><li>实用类，关于如何读书，如何拆书，以及拆书现场的一些的东西。</li><li>提出了一个读书方式：拆书帮便签法。</li><li>认为读书带目的</li><li>读一本书，不一定要整本书，选着对自己有价值的读就可以了。</li><li>生存余力=生存力量/生存负债</li></ul><h4 id="2-是否有道理？"><a href="#2-是否有道理？" class="headerlink" title="2. 是否有道理？"></a>2. 是否有道理？</h4><ul><li>这本书有一半的时间在说拆书家如何如何，没啥价值</li><li>比较赞同读书带目的，读书不一定全本书都读，可以选着对自己的有用的部分。</li></ul><h4 id="3-对我有什么价值？"><a href="#3-对我有什么价值？" class="headerlink" title="3. 对我有什么价值？"></a>3. 对我有什么价值？</h4><p>书签法，有点用，其核心大概是：</p><ul><li>用自己的话复述书的核心价值。</li><li>联系自己的相关经验，有相似的地方么</li><li>思考，可以怎么用，进行知识归类。</li></ul><p>可以用于读消遣书，或不需要分析阅读、精读的书。</p><hr><h1 id="读《如何高效读懂一本书》"><a href="#读《如何高效读懂一本书》" class="headerlink" title="读《如何高效读懂一本书》"></a>读《如何高效读懂一本书》</h1><p>检视略读，初步判断，该书，就是一本个人解读的书单。有时间再细看。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;工欲善其事必先利其器，对于我们这些已经脱离了学校的指导学习的热，如果想要不断提高自己，就必须学会自我驱动学习。在自我驱动学习中，书籍成为我们获取知识的重要途径。如何从一本书中汲取知识成为重中之重。&lt;/p&gt;
+&lt;p&gt;我以艾德勒的《如何阅读一本书》为基本框架，以赵周的《这样读书就
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://blog.zhangqifei.top/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ansible puppet saltstack三款自动化运维工具的对比！</title>
-    <link href="http://blog.zhangqifei.top/2017/08/10/ansible%20puppet%20saltstack%E4%B8%89%E6%AC%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AF%B9%E6%AF%94/"/>
-    <id>http://blog.zhangqifei.top/2017/08/10/ansible puppet saltstack三款自动化运维工具的对比/</id>
+    <link href="http://blog.zhangqifei.top/2017/08/10/linux/ansible%20puppet%20saltstack%E4%B8%89%E6%AC%BE%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AF%B9%E6%AF%94/"/>
+    <id>http://blog.zhangqifei.top/2017/08/10/linux/ansible puppet saltstack三款自动化运维工具的对比/</id>
     <published>2017-08-10T06:41:22.000Z</published>
     <updated>2018-04-22T09:29:33.219Z</updated>
     
@@ -70,8 +215,8 @@
   
   <entry>
     <title>运维自动化工具ansible</title>
-    <link href="http://blog.zhangqifei.top/2017/08/09/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7ansible/"/>
-    <id>http://blog.zhangqifei.top/2017/08/09/运维自动化工具ansible/</id>
+    <link href="http://blog.zhangqifei.top/2017/08/09/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7ansible/"/>
+    <id>http://blog.zhangqifei.top/2017/08/09/linux/运维自动化工具ansible/</id>
     <published>2017-08-09T12:42:22.000Z</published>
     <updated>2018-04-22T09:29:32.834Z</updated>
     
@@ -97,8 +242,8 @@
   
   <entry>
     <title>运维自动化工具puppet</title>
-    <link href="http://blog.zhangqifei.top/2017/08/07/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7puppet/"/>
-    <id>http://blog.zhangqifei.top/2017/08/07/运维自动化工具puppet/</id>
+    <link href="http://blog.zhangqifei.top/2017/08/07/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7puppet/"/>
+    <id>http://blog.zhangqifei.top/2017/08/07/linux/运维自动化工具puppet/</id>
     <published>2017-08-07T11:42:22.000Z</published>
     <updated>2018-04-22T09:29:33.000Z</updated>
     
@@ -124,8 +269,8 @@
   
   <entry>
     <title>运维自动化工具saltstack</title>
-    <link href="http://blog.zhangqifei.top/2017/08/06/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7saltstack/"/>
-    <id>http://blog.zhangqifei.top/2017/08/06/运维自动化工具saltstack/</id>
+    <link href="http://blog.zhangqifei.top/2017/08/06/linux/%E8%BF%90%E7%BB%B4%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7saltstack/"/>
+    <id>http://blog.zhangqifei.top/2017/08/06/linux/运维自动化工具saltstack/</id>
     <published>2017-08-06T10:42:22.000Z</published>
     <updated>2018-04-22T09:29:33.156Z</updated>
     
@@ -151,8 +296,8 @@
   
   <entry>
     <title>8分钟带你深入浅出搞懂Nginx</title>
-    <link href="http://blog.zhangqifei.top/2017/06/06/8%E5%88%86%E9%92%9F%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E6%90%9E%E6%87%82Nginx/"/>
-    <id>http://blog.zhangqifei.top/2017/06/06/8分钟带你深入浅出搞懂Nginx/</id>
+    <link href="http://blog.zhangqifei.top/2017/06/06/linux/8%E5%88%86%E9%92%9F%E5%B8%A6%E4%BD%A0%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E6%90%9E%E6%87%82Nginx/"/>
+    <id>http://blog.zhangqifei.top/2017/06/06/linux/8分钟带你深入浅出搞懂Nginx/</id>
     <published>2017-06-06T01:41:22.000Z</published>
     <updated>2018-04-22T09:29:33.065Z</updated>
     
@@ -177,8 +322,8 @@
   
   <entry>
     <title>Systemd 入门教程：命令篇</title>
-    <link href="http://blog.zhangqifei.top/2017/05/06/Systemd%20%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%EF%BC%9A%E5%91%BD%E4%BB%A4%E7%AF%87/"/>
-    <id>http://blog.zhangqifei.top/2017/05/06/Systemd 入门教程：命令篇/</id>
+    <link href="http://blog.zhangqifei.top/2017/05/06/linux/Systemd%20%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%EF%BC%9A%E5%91%BD%E4%BB%A4%E7%AF%87/"/>
+    <id>http://blog.zhangqifei.top/2017/05/06/linux/Systemd 入门教程：命令篇/</id>
     <published>2017-05-06T01:31:25.000Z</published>
     <updated>2018-04-22T09:30:14.835Z</updated>
     
@@ -201,9 +346,34 @@
   </entry>
   
   <entry>
+    <title>一次完整的http请求处理过程</title>
+    <link href="http://blog.zhangqifei.top/2017/05/05/%E9%9A%8F%E7%AC%94/%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4%E7%9A%84http%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B/"/>
+    <id>http://blog.zhangqifei.top/2017/05/05/随笔/一次完整的http请求处理过程/</id>
+    <published>2017-05-05T01:12:22.000Z</published>
+    <updated>2018-04-23T07:12:14.436Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Web服务请求处理步骤"><a href="#Web服务请求处理步骤" class="headerlink" title="Web服务请求处理步骤"></a>Web服务请求处理步骤</h3><center><img src="http://zhangqifei.top/picture/httpd/4.jpg" alt="Web服务请求处理步骤"></center><h4 id="一次完整的http请求处理过程"><a href="#一次完整的http请求处理过程" class="headerlink" title="一次完整的http请求处理过程"></a>一次完整的http请求处理过程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">1、建立连接：接收或拒绝连接请求</span><br><span class="line">2、接收请求：接收客户端请求报文中对某资源的一次请求的过程</span><br><span class="line">3、处理请求：服务器对请求报文进行解析，并获取请求的资源及请求方法等相关信息，根据方法，资源，首部和可选的主体部分对请求进行处理</span><br><span class="line">    元数据：请求报文首部</span><br><span class="line">    &lt;method&gt; &lt;URL&gt; &lt;VERSION&gt;</span><br><span class="line">    HEADERS格式name:value</span><br><span class="line">    &lt;request body&gt;</span><br><span class="line">    示例：</span><br><span class="line">    Host: www.chuyuni.cn   请求的主机名称</span><br><span class="line">    Server: Apache/2.4.7</span><br><span class="line">HTTP常用请求方式，MethodGET、POST、HEAD、PUT、DELETE、TRACE、OPTIONS</span><br><span class="line">4、访问资源：服务器获取请求报文中请求的资源web服务器，即存放了web资源的服务器，负责向请求者提供对方请求的静态资源，或动态运行后生成的资源</span><br><span class="line">        资源放置于本地文件系统特定的路径：DocRoot</span><br><span class="line">        DocRoot → /var/www/html</span><br><span class="line">        /var/www/html/images/logo.jpg</span><br><span class="line">        http://www.magedu.com/images/logo.jpg</span><br><span class="line">    web服务器资源路径映射方式：</span><br><span class="line">    (a) docroot        (b) alias</span><br><span class="line">    (c) 虚拟主机docroot(d) 用户家目录docroot</span><br><span class="line">5、构建响应报文：一旦Web服务器识别除了资源，就执行请求方法中描述的动作，并返回响应报文。响应报文中包含有响应状态码、响应首部，如果生成了响应主体的话，还包括响应主体</span><br><span class="line">    1）响应实体：如果事务处理产生了响应主体，就将内容放在响应报文中回送过去。响应报文中通常包括：描述了响应主体MIME类型的Content-Type首部描述了响应主体长度的Content-Length实际报文的主体内容</span><br><span class="line">    2）URL重定向：web服务构建的响应并非客户端请求的资源，而是资源另外一个访问路径</span><br><span class="line">    永久重定向：http://www.360buy.com</span><br><span class="line">    临时重定向：http://www.taobao.com</span><br><span class="line">    3）MIME类型：Web服务器要负责确定响应主体的MIME类型。多种配置服务器的方法可将MIME类型与资源管理起来魔法分类：Apache web服务器可以扫描每个资源的内容，并将其与一个已知模式表(被称为魔法文件)进行匹配，以决定每个文件的MIME类型。这样做可能比较慢，但很方便，尤其是文件没有标准扩展名时显式分类：可以对Web服务器进行配置，使其不考虑文件的扩展名或内容，强制特定文件或目录内容拥有某个MIME类型类型协商：有些Web服务器经过配置，可以以多种文档格式来存储资源。在这种情况下，可以配置Web服务器，使其可以通过与用户的协商来决定使用哪种格式(及相关的MIME类型)&quot;最好&quot;</span><br><span class="line">    </span><br><span class="line">6、发送响应报文：Web服务器通过连接发送数据时也会面临与接收数据一样的问题。服务器可能有很多条到各个客户端的连接，有些是空闲的，有些在向服务器发送数据，还有一些在向客户端回送响应数据。服务器要记录连接的状态，还要特别注意对持久连接的处理。对非持久连接而言，服务器应该在发送了整条报文之后，关闭自己这一端的连接。对持久连接来说，连接可能仍保持打开状态，在这种情况下，服务器要正确地计算Content-Length首部，不然客户端就无法知道响应什么时候结束了</span><br><span class="line"></span><br><span class="line">7、记录日志：最后，当事务结束时，Web服务器会在日志文件中添加一个条目，来描述已执行的事务</span><br></pre></td></tr></table></figure><p>Web访问响应模型（Web I/O）</p><blockquote><ul><li>单进程I/O模型：启动一个进程处理用户请求，而且一次只处理一个，多个请求被串行响应</li><li>多进程I/O模型：并行启动多个进程,每个进程响应一个连接请求</li><li>复用I/O结构：启动一个进程，同时响应N个连接请求实现方法：多线程模型和事件驱动多线程模型：一个进程生成N个线程，每线程响应一个连接请求事件驱动：一个进程处理N个请求</li><li>复用的多进程I/O模型：启动M个进程，每个进程响应N个连接请求，同时接收M*N个请求</li></ul></blockquote><center><img src="http://zhangqifei.top/picture/httpd/5.jpg" alt="Web访问响应模型"></center>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Web服务请求处理步骤&quot;&gt;&lt;a href=&quot;#Web服务请求处理步骤&quot; class=&quot;headerlink&quot; title=&quot;Web服务请求处理步骤&quot;&gt;&lt;/a&gt;Web服务请求处理步骤&lt;/h3&gt;&lt;center&gt;&lt;img src=&quot;http://zhangqifei.t
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
+    
+    
+      <category term="HTTP" scheme="http://blog.zhangqifei.top/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux各发行版时间线2017年版本</title>
-    <link href="http://blog.zhangqifei.top/2017/03/05/Linux%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E6%97%B6%E9%97%B4%E7%BA%BF2017%E5%B9%B4%E7%89%88%E6%9C%AC/"/>
-    <id>http://blog.zhangqifei.top/2017/03/05/Linux各发行版时间线2017年版本/</id>
+    <link href="http://blog.zhangqifei.top/2017/03/05/linux/Linux%E5%90%84%E5%8F%91%E8%A1%8C%E7%89%88%E6%97%B6%E9%97%B4%E7%BA%BF2017%E5%B9%B4%E7%89%88%E6%9C%AC/"/>
+    <id>http://blog.zhangqifei.top/2017/03/05/linux/Linux各发行版时间线2017年版本/</id>
     <published>2017-03-05T14:47:20.000Z</published>
     <updated>2018-04-22T09:30:14.906Z</updated>
     
@@ -230,8 +400,8 @@
   
   <entry>
     <title>Linux防火墙</title>
-    <link href="http://blog.zhangqifei.top/2017/03/04/Linux%E9%98%B2%E7%81%AB%E5%A2%99/"/>
-    <id>http://blog.zhangqifei.top/2017/03/04/Linux防火墙/</id>
+    <link href="http://blog.zhangqifei.top/2017/03/04/linux/Linux%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    <id>http://blog.zhangqifei.top/2017/03/04/linux/Linux防火墙/</id>
     <published>2017-03-04T01:42:22.000Z</published>
     <updated>2018-04-22T09:29:33.353Z</updated>
     
@@ -255,9 +425,34 @@
   </entry>
   
   <entry>
+    <title>Chrome浏览器最牛插件之一 Vimium</title>
+    <link href="http://blog.zhangqifei.top/2017/02/08/%E5%B7%A5%E5%85%B7/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%80%E7%89%9B%E6%8F%92%E4%BB%B6%E4%B9%8B%E4%B8%80%20Vimium/"/>
+    <id>http://blog.zhangqifei.top/2017/02/08/工具/Chrome浏览器最牛插件之一 Vimium/</id>
+    <published>2017-02-08T00:33:59.000Z</published>
+    <updated>2018-04-23T07:12:34.107Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="vimium"><a href="#vimium" class="headerlink" title="vimium"></a>vimium</h2><p>Vimium 这个名字其实是 Vim 和 Chromium 的合体。很多人可能不知道 Vim，Vim 其实是 Linux 等平台上的一款文本编辑器，熟练的运用它可以彻底脱离鼠标，通过一系列快捷键，来操作写代码。<br>而 Vimium 则继承了 Vim 中的常用操作，让你在使用 Chrome 的过程中，无论是浏览网页、切换标签或是其它任何操作，全都可以只通过键盘完成。想像一下，你再也不需要移动鼠标去打开一个链接，手指不用离开键盘，这一切将会是多么的幸福。</p><p><center><img src="http://zhangqifei.top/picture/ifeier/chrome/vimium.jpg" width="500" height="200" alt="vimium" align="center"></center><br>废话不多说，直接上快捷键😁.上操作命令</p><h3 id="导航当页"><a href="#导航当页" class="headerlink" title="导航当页"></a>导航当页</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">?       显示help，查询vimium的所有使用方法</span><br><span class="line">h       向左滚动</span><br><span class="line">j       向下滚动</span><br><span class="line">k       向上滚动</span><br><span class="line">l       向右滚动</span><br><span class="line">gg      滚动到顶部</span><br><span class="line">G       滚动到底部</span><br><span class="line">d       向下滚动半页</span><br><span class="line">u       向上滚动半页面</span><br><span class="line">f       显示链接字母，在当前页面打开</span><br><span class="line">F       显示链接字母，在新的页面打开</span><br><span class="line">r       刷新</span><br><span class="line">gs      显示网页源代码</span><br><span class="line">i       进入插入模式，所有按键的命令都无效，直至ESC键退出</span><br><span class="line">yy      将当前的网址复制到剪贴板</span><br><span class="line">yf      显示链接字母，并将网址拷贝到剪贴板</span><br><span class="line">gf      cycle forward to the next frame</span><br><span class="line">gF      focus the main/top frame</span><br></pre></td></tr></table></figure><h3 id="打开新的页面"><a href="#打开新的页面" class="headerlink" title="打开新的页面"></a>打开新的页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">o       搜索网址，书签，或历史记录，在当前页面打开</span><br><span class="line">O       搜索网址，书签，或历史记录，在新的页面打开</span><br><span class="line">b       搜索书签，在当前页面打开</span><br><span class="line">B       搜索书签，在新的页面打开</span><br></pre></td></tr></table></figure><h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/       进入查找模式，输入关键字查找，ESC退出</span><br><span class="line">n       切换到下一个匹配</span><br><span class="line">N       切换到上一个匹配</span><br></pre></td></tr></table></figure><h3 id="前进后退"><a href="#前进后退" class="headerlink" title="前进后退"></a>前进后退</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">H       后退</span><br><span class="line">L       前进</span><br></pre></td></tr></table></figure><h3 id="切换tab"><a href="#切换tab" class="headerlink" title="切换tab"></a>切换tab</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">J, gT   切换到左边tab</span><br><span class="line">K, gt   切换到右边tab</span><br><span class="line">g0      切换到第一个tab</span><br><span class="line">g$      切换到最后一个tab</span><br><span class="line">^       切换到刚才的tab</span><br><span class="line">t       创建一个新的页面</span><br><span class="line">yt      复制当前页面</span><br><span class="line">x       关闭当前页面</span><br><span class="line">X       恢复刚才关闭的页面</span><br><span class="line">T       在当前所有的tab页面中搜索</span><br><span class="line">&lt;a-p&gt;   pin/unpin current tab</span><br></pre></td></tr></table></figure><h3 id="标记"><a href="#标记" class="headerlink" title="标记"></a>标记</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ma      当页标记，只能在当前tab页面跳转，m + 一个小写字母</span><br><span class="line">mA      全局标记，可以再切换到其他tab的跳转过来，m + 一个大写字母</span><br><span class="line">`a      跳转到当页标记</span><br><span class="line">`A      跳转到全局标记</span><br><span class="line">``      跳回之前的位置</span><br></pre></td></tr></table></figure><h3 id="进阶控制命令"><a href="#进阶控制命令" class="headerlink" title="进阶控制命令"></a>进阶控制命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">]], [[  Follow the link labeled &apos;next&apos; or &apos;&gt;&apos; (&apos;previous&apos; or &apos;&lt;&apos;)</span><br><span class="line">          - helpful for browsing paginated sites</span><br><span class="line">&lt;a-f&gt;   open multiple links in a new tab</span><br><span class="line">gi      focus the first (or n-th) text input box on the page</span><br><span class="line">gu      跳转到当前网址的上一级网址</span><br><span class="line">gU      跳转到当前网址的跟网址</span><br><span class="line">ge      编辑当前的网址，在当前页面打开</span><br><span class="line">gE      编辑当前网址，在新的页面打开</span><br><span class="line">zH      滚动到最左边</span><br><span class="line">zL      滚动到最右边</span><br><span class="line">v       enter visual mode; use p/P to paste-and-go, use y to yank</span><br><span class="line">V       enter visual line mode</span><br></pre></td></tr></table></figure><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5t      数字num + t，打开num个tab页面</span><br><span class="line">&lt;Esc&gt;   ESC按钮，可以从任意控制命令中退出，也可以从任意模式中退出（例如插入模式、查找模式）</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;vimium&quot;&gt;&lt;a href=&quot;#vimium&quot; class=&quot;headerlink&quot; title=&quot;vimium&quot;&gt;&lt;/a&gt;vimium&lt;/h2&gt;&lt;p&gt;Vimium 这个名字其实是 Vim 和 Chromium 的合体。很多人可能不知道 Vim，Vim 其实是
+      
+    
+    </summary>
+    
+      <category term="浏览器" scheme="http://blog.zhangqifei.top/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+    
+      <category term="Chrome" scheme="http://blog.zhangqifei.top/tags/Chrome/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CentOS7启动及排错</title>
-    <link href="http://blog.zhangqifei.top/2017/01/07/CentOS7%E5%90%AF%E5%8A%A8%E5%8F%8A%E6%8E%92%E9%94%99/"/>
-    <id>http://blog.zhangqifei.top/2017/01/07/CentOS7启动及排错/</id>
+    <link href="http://blog.zhangqifei.top/2017/01/07/linux/CentOS7%E5%90%AF%E5%8A%A8%E5%8F%8A%E6%8E%92%E9%94%99/"/>
+    <id>http://blog.zhangqifei.top/2017/01/07/linux/CentOS7启动及排错/</id>
     <published>2017-01-06T17:50:32.000Z</published>
     <updated>2018-04-22T08:27:28.687Z</updated>
     
@@ -282,8 +477,8 @@
   
   <entry>
     <title>自建CA认证和证书</title>
-    <link href="http://blog.zhangqifei.top/2016/09/06/%E8%87%AA%E5%BB%BACA%E8%AE%A4%E8%AF%81%E5%92%8C%E8%AF%81%E4%B9%A6/"/>
-    <id>http://blog.zhangqifei.top/2016/09/06/自建CA认证和证书/</id>
+    <link href="http://blog.zhangqifei.top/2016/09/06/linux/%E8%87%AA%E5%BB%BACA%E8%AE%A4%E8%AF%81%E5%92%8C%E8%AF%81%E4%B9%A6/"/>
+    <id>http://blog.zhangqifei.top/2016/09/06/linux/自建CA认证和证书/</id>
     <published>2016-09-05T16:07:24.000Z</published>
     <updated>2018-04-22T09:29:32.785Z</updated>
     
@@ -309,8 +504,8 @@
   
   <entry>
     <title>linux命令-head</title>
-    <link href="http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-head/"/>
-    <id>http://blog.zhangqifei.top/2016/07/06/linux命令-head/</id>
+    <link href="http://blog.zhangqifei.top/2016/07/06/linux/linux%E5%91%BD%E4%BB%A4-head/"/>
+    <id>http://blog.zhangqifei.top/2016/07/06/linux/linux命令-head/</id>
     <published>2016-07-06T09:12:42.000Z</published>
     <updated>2018-04-22T09:29:33.121Z</updated>
     
@@ -324,223 +519,6 @@
 &lt;ol&gt;
 &lt;li&gt;命令格式：&lt;br&gt; head [参数]… [文件]…  &lt;/li&gt;
 
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
-    
-    
-      <category term="命令" scheme="http://blog.zhangqifei.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux命令-seq</title>
-    <link href="http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-seq/"/>
-    <id>http://blog.zhangqifei.top/2016/07/06/linux命令-seq/</id>
-    <published>2016-07-06T08:12:42.000Z</published>
-    <updated>2018-04-22T09:29:32.809Z</updated>
-    
-    <content type="html"><![CDATA[<p>seq命令用于产生从某个数到另外一个数之间的所有整数。</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">seq [选项]... 尾数</span><br><span class="line">seq [选项]... 首数 尾数 </span><br><span class="line">seq [选项]... 首数 增量 尾数</span><br></pre></td></tr></table></figure><h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f, --format=格式 使用printf 样式的浮点格式</span><br><span class="line">-s, --separator=字符串 使用指定字符串分隔数字（默认使用：\n）</span><br><span class="line">-w, --equal-width 在列前添加0 使得宽度相同</span><br></pre></td></tr></table></figure><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p><strong>-f选项：指定格式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -f &quot;%3g&quot; 9 11 </span><br><span class="line"> 9 </span><br><span class="line">10 </span><br><span class="line">11 </span><br><span class="line">注意：%后面指定数字的位数默认是%g，%3g那么数字位数不足部分是空格。</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -f &quot;str%03g&quot; 9 11 </span><br><span class="line">str009</span><br><span class="line">str010</span><br><span class="line">str011</span><br><span class="line">注意：这样的话数字位数不足部分是0，%前面制定字符串。</span><br></pre></td></tr></table></figure><p><strong>-w选项：指定输出数字同宽</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -w 98 101</span><br><span class="line">098 </span><br><span class="line">099</span><br><span class="line">100 </span><br><span class="line">101 </span><br><span class="line">注意：不能和-f一起用，输出是同宽的。</span><br></pre></td></tr></table></figure></p><p><strong>s选项：指定分隔符（默认是回车）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -s&quot;    &quot; -f&quot;str%03g&quot; 9 11     </span><br><span class="line">str009    str010    str011</span><br></pre></td></tr></table></figure></p><p><strong>指定\n作为分隔符号：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#seq -s&quot;`echo -e &quot;/t&quot;`&quot; 9 11</span><br><span class="line">9/t10/t11</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;seq命令用于产生从某个数到另外一个数之间的所有整数。&lt;/p&gt;
-&lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
-    
-    
-      <category term="命令" scheme="http://blog.zhangqifei.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux命令-grep</title>
-    <link href="http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-grep/"/>
-    <id>http://blog.zhangqifei.top/2016/07/06/linux命令-grep/</id>
-    <published>2016-07-06T07:12:42.000Z</published>
-    <updated>2018-04-22T09:29:33.091Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>Linux系统中grep命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹 配的行打印出来。grep全称是<code>Global Regular Expression Print</code>，表示全局正则表达式版本，它的使用权限是所有用户。</li><li>grep的工作方式是这样的，它在一个或多个文件中搜索字符串模板。如果模板包括空格，则必须被引用，模板后的所有字符串被看作文件名。搜索的结果被送到标准输出，不影响原文件内容。</li><li>grep可用于shell脚本，因为grep通过返回一个状态值来说明搜索的状态，如果模板搜索成功，则返回0，如果搜索不成功，则返回1，如果搜索的文件不存在，则返回2。我们利用这些返回值就可进行一些自动化的文本处理工作。</li></ul><h3 id="1．命令格式："><a href="#1．命令格式：" class="headerlink" title="1．命令格式："></a>1．命令格式：</h3><blockquote><p>grep [option] pattern file</p></blockquote><h3 id="2．命令功能："><a href="#2．命令功能：" class="headerlink" title="2．命令功能："></a>2．命令功能：</h3><p>用于过滤/搜索的特定字符。可使用正则表达式能多种命令配合使用，使用上十分灵活。</p><h3 id="3．命令参数："><a href="#3．命令参数：" class="headerlink" title="3．命令参数："></a>3．命令参数：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">-a   --text   #不要忽略二进制的数据。   </span><br><span class="line">-A&lt;显示行数&gt;   --after-context=&lt;显示行数&gt;   #除了显示符合范本样式的那一列之外，并显示该行之后的内容。   </span><br><span class="line">-b   --byte-offset   #在显示符合样式的那一行之前，标示出该行第一个字符的编号。   </span><br><span class="line">-B&lt;显示行数&gt;   --before-context=&lt;显示行数&gt;   #除了显示符合样式的那一行之外，并显示该行之前的内容。   </span><br><span class="line">-c    --count   #计算符合样式的列数。   </span><br><span class="line">-C&lt;显示行数&gt;    --context=&lt;显示行数&gt;或-&lt;显示行数&gt;   #除了显示符合样式的那一行之外，并显示该行之前后的内容。   </span><br><span class="line">-d &lt;动作&gt;      --directories=&lt;动作&gt;   #当指定要查找的是目录而非文件时，必须使用这项参数，否则grep指令将回报信息并停止动作。   </span><br><span class="line">-e&lt;范本样式&gt;  --regexp=&lt;范本样式&gt;   #指定字符串做为查找文件内容的样式。   </span><br><span class="line">-E      --extended-regexp   #将样式为延伸的普通表示法来使用。   </span><br><span class="line">-f&lt;规则文件&gt;  --file=&lt;规则文件&gt;   #指定规则文件，其内容含有一个或多个规则样式，让grep查找符合规则条件的文件内容，格式为每行一个规则样式。   </span><br><span class="line">-F   --fixed-regexp   #将样式视为固定字符串的列表。   </span><br><span class="line">-G   --basic-regexp   #将样式视为普通的表示法来使用。   </span><br><span class="line">-h   --no-filename   #在显示符合样式的那一行之前，不标示该行所属的文件名称。   </span><br><span class="line">-H   --with-filename   #在显示符合样式的那一行之前，表示该行所属的文件名称。   </span><br><span class="line">-i    --ignore-case   #忽略字符大小写的差别。   </span><br><span class="line">-l    --file-with-matches   #列出文件内容符合指定的样式的文件名称。   </span><br><span class="line">-L   --files-without-match   #列出文件内容不符合指定的样式的文件名称。   </span><br><span class="line">-n   --line-number   #在显示符合样式的那一行之前，标示出该行的列数编号。   </span><br><span class="line">-q   --quiet或--silent   #不显示任何信息。   </span><br><span class="line">-r   --recursive   #此参数的效果和指定“-d recurse”参数相同。   </span><br><span class="line">-s   --no-messages   #不显示错误信息。   </span><br><span class="line">-v   --revert-match   #显示不包含匹配文本的所有行。   </span><br><span class="line">-V   --version   #显示版本信息。   </span><br><span class="line">-w   --word-regexp   #只显示全字符合的列。   </span><br><span class="line">-x    --line-regexp   #只显示全列符合的列。   </span><br><span class="line">-y   #此参数的效果和指定“-i”参数相同。</span><br></pre></td></tr></table></figure><h3 id="4．规则表达式："><a href="#4．规则表达式：" class="headerlink" title="4．规则表达式："></a>4．规则表达式：</h3><p>grep的规则表达式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">^  #锚定行的开始 如：&apos;^grep&apos;匹配所有以grep开头的行。    </span><br><span class="line">$  #锚定行的结束 如：&apos;grep$&apos;匹配所有以grep结尾的行。    </span><br><span class="line">.  #匹配一个非换行符的字符 如：&apos;gr.p&apos;匹配gr后接一个任意字符，然后是p。    </span><br><span class="line">*  #匹配零个或多个先前字符 如：&apos;*grep&apos;匹配所有一个或多个空格后紧跟grep的行。    </span><br><span class="line">.*   #一起用代表任意字符。   </span><br><span class="line">[]   #匹配一个指定范围内的字符，如&apos;[Gg]rep&apos;匹配Grep和grep。    </span><br><span class="line">[^]  #匹配一个不在指定范围内的字符，如：&apos;[^A-FH-Z]rep&apos;匹配不包含A-R和T-Z的一个字母开头，紧跟rep的行。    </span><br><span class="line">\(..\)  #标记匹配字符，如&apos;\(love\)&apos;，love被标记为1。    </span><br><span class="line">\&lt;      #锚定单词的开始，如:&apos;\&lt;grep&apos;匹配包含以grep开头的单词的行。    </span><br><span class="line">\&gt;      #锚定单词的结束，如&apos;grep\&gt;&apos;匹配包含以grep结尾的单词的行。    </span><br><span class="line">x\&#123;m\&#125;  #重复字符x，m次，如：&apos;0\&#123;5\&#125;&apos;匹配包含5个o的行。    </span><br><span class="line">x\&#123;m,\&#125;  #重复字符x,至少m次，如：&apos;o\&#123;5,\&#125;&apos;匹配至少有5个o的行。    </span><br><span class="line">x\&#123;m,n\&#125;  #重复字符x，至少m次，不多于n次，如：&apos;o\&#123;5,10\&#125;&apos;匹配5--10个o的行。   </span><br><span class="line">\w    #匹配文字和数字字符，也就是[A-Za-z0-9]，如：&apos;G\w*p&apos;匹配以G后跟零个或多个文字或数字字符，然后是p。   </span><br><span class="line">\W    #\w的反置形式，匹配一个或多个非单词字符，如点号句号等。   </span><br><span class="line">\b    #单词锁定符，如: &apos;\bgrep\b&apos;只匹配grep。</span><br></pre></td></tr></table></figure></p><blockquote><p>POSIX字符:<br>为了在不同国家的字符编码中保持一至，POSIX(The Portable Operating System Interface)增加了特殊的字符类，如[:alnum:]是[A-Za-z0-9]的另一个写法。要把它们放到[]号内才能成为正则表达式，如[A- Za-z0-9]或[[:alnum:]]。在linux下的grep除fgrep外，都支持POSIX的字符类。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[:alnum:]    #文字数字字符   </span><br><span class="line">[:alpha:]    #文字字符   </span><br><span class="line">[:digit:]    #数字字符   </span><br><span class="line">[:graph:]    #非空字符（非空格、控制字符）   </span><br><span class="line">[:lower:]    #小写字符   </span><br><span class="line">[:cntrl:]    #控制字符   </span><br><span class="line">[:print:]    #非空字符（包括空格）   </span><br><span class="line">[:punct:]    #标点符号   </span><br><span class="line">[:space:]    #所有空白字符（新行，空格，制表符）   </span><br><span class="line">[:upper:]    #大写字符   </span><br><span class="line">[:xdigit:]   #十六进制数字（0-9，a-f，A-F）</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;Linux系统中grep命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹 配的行打印出来。grep全称是&lt;code&gt;Global Regular Expression Print&lt;/code&gt;，表示全局正则表达式版本，它的使用权限是所有用户。&lt;/
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
-    
-    
-      <category term="命令" scheme="http://blog.zhangqifei.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux命令-echo</title>
-    <link href="http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-echo/"/>
-    <id>http://blog.zhangqifei.top/2016/07/06/linux命令-echo/</id>
-    <published>2016-07-06T04:12:42.000Z</published>
-    <updated>2018-04-22T09:29:32.654Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>echo命令向文件中写入内容，例如:使用echo指令覆盖文件内容，使用echo指令向文件追加内容，使用echo指令往文件中追加制表符。</li><li>echo向文件中输出内容的基本方法是使用IO重定向指令”&gt;”，默认情况下echo输出到标准输出中，使用”&gt;”指令可重定向输出到文件中。</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">用法：echo [短选项]... [字符串]...  </span><br><span class="line">  或：echo 长选项  </span><br><span class="line">将 string 回显到标准输出。  </span><br><span class="line">  -n 不尾随换行符  </span><br><span class="line">  -e 启用解释反斜杠的转义功能  </span><br><span class="line">  -E 禁用解释反斜杠的转义功能(默认)  </span><br><span class="line">      --help 显示此帮助信息并退出  </span><br><span class="line">      --version 显示版本信息并退出  </span><br><span class="line">若-e 可用，则以下序列即可识别：  </span><br><span class="line">  \\    反斜杠  </span><br><span class="line">  \a    响铃声  </span><br><span class="line">  \b    会删除字符间的所有空格  *</span><br><span class="line">  \c    不再产生新的输出  </span><br><span class="line">  \e    转义符    </span><br><span class="line">  \f    换页  </span><br><span class="line">  \n    新行 * </span><br><span class="line">  \r    回车  </span><br><span class="line">  \t    水平制表符  </span><br><span class="line">  \v    竖直制表符  </span><br><span class="line">  \0NNN   字节数以八进制数 NNN (1至3位)表示  </span><br><span class="line">  \xHH    字节数以十六进制数 HH (1至2位)表示</span><br></pre></td></tr></table></figure><h3 id="使用’-b’选项"><a href="#使用’-b’选项" class="headerlink" title="使用’\b’选项"></a>使用’\b’选项</h3><blockquote><p>‘-e’后带上’\b’会删除字符间的所有空格。<br>注意： Linux中的选项’-e’扮演了转义字符反斜线的翻译器。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -e &quot;Tecmint \bis \ba \bcommunity \bof \bLinux \bNerds&quot; </span><br><span class="line">TecmintisacommunityofLinuxNerds</span><br></pre></td></tr></table></figure><h3 id="使用’-n’选项"><a href="#使用’-n’选项" class="headerlink" title="使用’\n’选项"></a>使用’\n’选项</h3><blockquote><p>“-e”后面的带上’\n’行会在遇到的地方作为新的一行</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -e &quot;Tecmint \nis \na \ncommunity \nof \nLinux \nNerds&quot; </span><br><span class="line">Tecmint </span><br><span class="line">is </span><br><span class="line">a </span><br><span class="line">community </span><br><span class="line">of </span><br><span class="line">Linux </span><br><span class="line">Nerds</span><br></pre></td></tr></table></figure><h3 id="使用’-t’选项"><a href="#使用’-t’选项" class="headerlink" title="使用’\t’选项"></a>使用’\t’选项</h3><blockquote><p>‘-e’后面跟上’\t’会在空格间加上水平制表符。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -e &quot;Tecmint \tis \ta \tcommunity \tof \tLinux \tNerds&quot; </span><br><span class="line">Tecmint     is  a   community   of  Linux   Nerds</span><br></pre></td></tr></table></figure><h4 id="也可以同时使用换行‘-n‘与水平制表符‘-t‘"><a href="#也可以同时使用换行‘-n‘与水平制表符‘-t‘" class="headerlink" title="也可以同时使用换行‘\n‘与水平制表符‘\t‘"></a>也可以同时使用换行‘\n‘与水平制表符‘\t‘</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -e &quot;\n\tTecmint \n\tis \n\ta \n\tcommunity \n\tof \n\tLinux \n\tNerds&quot; </span><br><span class="line"> </span><br><span class="line">    Tecmint </span><br><span class="line">    is </span><br><span class="line">    a </span><br><span class="line">    community </span><br><span class="line">    of </span><br><span class="line">    Linux </span><br><span class="line">    Nerds</span><br></pre></td></tr></table></figure><h3 id="使用’-v’选项"><a href="#使用’-v’选项" class="headerlink" title="使用’\v’选项"></a>使用’\v’选项</h3><blockquote><p>‘-e’后面跟上’\v’会加上垂直制表符。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -e &quot;\vTecmint \vis \va \vcommunity \vof \vLinux \vNerds&quot; </span><br><span class="line"> </span><br><span class="line">Tecmint </span><br><span class="line">        is </span><br><span class="line">           a </span><br><span class="line">             community </span><br><span class="line">                       of </span><br><span class="line">                          Linux </span><br><span class="line">                                Nerds</span><br></pre></td></tr></table></figure><h4 id="也可以同时使用换行’-n’与垂直制表符’-v’"><a href="#也可以同时使用换行’-n’与垂直制表符’-v’" class="headerlink" title="也可以同时使用换行’\n’与垂直制表符’\v’"></a>也可以同时使用换行’\n’与垂直制表符’\v’</h4><blockquote><p>注意： 你可以按照你的需求连续使用两个或者多个垂直制表符，水平制表符与换行符。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -e &quot;\n\vTecmint \n\vis \n\va \n\vcommunity \n\vof \n\vLinux \n\vNerds&quot; </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">Tecmint </span><br><span class="line"> </span><br><span class="line">is </span><br><span class="line"> </span><br><span class="line">a </span><br><span class="line"> </span><br><span class="line">community </span><br><span class="line"> </span><br><span class="line">of </span><br><span class="line"> </span><br><span class="line">Linux </span><br><span class="line"> </span><br><span class="line">Nerds</span><br></pre></td></tr></table></figure><h3 id="使用’-r’选项"><a href="#使用’-r’选项" class="headerlink" title="使用’\r’选项"></a>使用’\r’选项</h3><blockquote><p>‘-e’后面跟上‘\r’来指定输出中的回车符。（LCTT 译注：会覆写行开头的字符）</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -e &quot;Tecmint \ris a community of Linux Nerds&quot; </span><br><span class="line"> </span><br><span class="line">is a community of Linux Nerds</span><br></pre></td></tr></table></figure><h3 id="使用’-c’选项"><a href="#使用’-c’选项" class="headerlink" title="使用’\c’选项"></a>使用’\c’选项</h3><blockquote><p>‘-e’后面跟上’\c’会抑制输出后面的字符并且最后不会换新行。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -e &quot;Tecmint is a community \cof Linux Nerds&quot; </span><br><span class="line">Tecmint is a community [root@centos7 ~]#</span><br></pre></td></tr></table></figure><h3 id="‘-n’会在echo完后不会输出新行"><a href="#‘-n’会在echo完后不会输出新行" class="headerlink" title="‘-n’会在echo完后不会输出新行"></a>‘-n’会在echo完后不会输出新行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -n &quot;Tecmint is a community of Linux Nerds&quot; </span><br><span class="line">Tecmint is a community of Linux Nerds[root@centos7 ~]#</span><br></pre></td></tr></table></figure><h3 id="使用’-a’选项"><a href="#使用’-a’选项" class="headerlink" title="使用’\a’选项"></a>使用’\a’选项</h3><blockquote><p>‘-e’后面跟上’\a’选项会听到声音警告。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# echo -e &quot;Tecmint is a community of \aLinux Nerds&quot; </span><br><span class="line">Tecmint is a community of Linux Nerds</span><br></pre></td></tr></table></figure><blockquote><p>注意： 在你开始前，请先检查你的音量设置。</p></blockquote><h3 id="使用echo命令打印所有的文件和文件夹（ls命令的替代）"><a href="#使用echo命令打印所有的文件和文件夹（ls命令的替代）" class="headerlink" title="使用echo命令打印所有的文件和文件夹（ls命令的替代）"></a>使用echo命令打印所有的文件和文件夹（ls命令的替代）</h3><blockquote><p>比如，让我们假设你想要打印所有的’.sh’文件，使用下面的命令。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 app]#echo *.sh</span><br><span class="line">backup73.sh f1.sh hello.sh scp73.sh systeminfo.sh</span><br><span class="line">[root@centos7 ~]# echo *  //打印所有与ls相当</span><br><span class="line">backup73.sh etc f1.sh hello.sh scp73.sh systeminfo.sh wang</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;echo命令向文件中写入内容，例如:使用echo指令覆盖文件内容，使用echo指令向文件追加内容，使用echo指令往文件中追加制表符。&lt;/li&gt;
-&lt;li&gt;echo向文件中输出内容的基本方法是使用IO重定向指令”&amp;gt;”，默认情况下echo输出到标准输出中，使用
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
-    
-    
-      <category term="命令" scheme="http://blog.zhangqifei.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux命令-cat</title>
-    <link href="http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-cat/"/>
-    <id>http://blog.zhangqifei.top/2016/07/06/linux命令-cat/</id>
-    <published>2016-07-06T01:32:42.000Z</published>
-    <updated>2018-04-22T09:29:32.718Z</updated>
-    
-    <content type="html"><![CDATA[<p>cat命令的用途是连接文件或标准输入并打印。这个命令<strong>常用来显示文件内容</strong>，或者将几个文件连接起来显示，或者从标准输入读取内容并显示，它常与重定向符号配合使用。<br>语法格式</p><blockquote><p>cat [-AbeEnstTuv] [–help] [–version] fileName</p></blockquote><p>参数说明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-n 或 --number：由 1 开始对所有输出的行数编号。</span><br><span class="line">-b 或 --number-nonblank：和 -n :     相似，只不过对于空白行不编号。</span><br><span class="line">-s 或 --squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行。</span><br><span class="line">-v 或 --show-nonprinting：使用 ^ 和 M- 符号，除了 LFD 和 TAB 之外。</span><br><span class="line">-E 或 --show-ends : 在每行结束处显示 $。</span><br><span class="line">-T 或 --show-tabs: 将 TAB 字符显示为 ^I。</span><br><span class="line">-e : 等价于 -vE。</span><br><span class="line">-A, --show-all：等价于 -vET。</span><br><span class="line">-e：等价于&quot;-vE&quot;选项；</span><br><span class="line">-t：等价于&quot;-vT&quot;选项；</span><br></pre></td></tr></table></figure></p><h3 id="实例1：把-textfile1-的文档内容加上行号后输入-textfile2-这个文档里："><a href="#实例1：把-textfile1-的文档内容加上行号后输入-textfile2-这个文档里：" class="headerlink" title="实例1：把 textfile1 的文档内容加上行号后输入 textfile2 这个文档里："></a>实例1：把 textfile1 的文档内容加上行号后输入 textfile2 这个文档里：</h3><p><code>cat -n textfile1 &gt; textfile2</code></p><h3 id="实例2：把-textfile1-和-textfile2-的文档内容加上行号（空白行不加）之后将内容附加到-textfile3-文档里："><a href="#实例2：把-textfile1-和-textfile2-的文档内容加上行号（空白行不加）之后将内容附加到-textfile3-文档里：" class="headerlink" title="实例2：把 textfile1 和 textfile2 的文档内容加上行号（空白行不加）之后将内容附加到 textfile3 文档里："></a>实例2：把 textfile1 和 textfile2 的文档内容加上行号（空白行不加）之后将内容附加到 textfile3 文档里：</h3><p><code>cat -b textfile1 textfile2 &gt;&gt; textfile3</code></p><h3 id="实例3：清空-etc-test-txt-文档内容："><a href="#实例3：清空-etc-test-txt-文档内容：" class="headerlink" title="实例3：清空 /etc/test.txt 文档内容："></a>实例3：清空 /etc/test.txt 文档内容：</h3><p><code>cat /dev/null &gt; /etc/test.txt</code></p><h3 id="实例4：cat-也可以用来制作镜像文件。例如要制作软盘的镜像文件，将软盘放好后输入："><a href="#实例4：cat-也可以用来制作镜像文件。例如要制作软盘的镜像文件，将软盘放好后输入：" class="headerlink" title="实例4：cat 也可以用来制作镜像文件。例如要制作软盘的镜像文件，将软盘放好后输入："></a>实例4：cat 也可以用来制作镜像文件。例如要制作软盘的镜像文件，将软盘放好后输入：</h3><p><code>cat /dev/fd0 &gt; OUTFILE</code></p><h3 id="实例5：相反的，如果想把-image-file-写到软盘，输入："><a href="#实例5：相反的，如果想把-image-file-写到软盘，输入：" class="headerlink" title="实例5：相反的，如果想把 image file 写到软盘，输入："></a>实例5：相反的，如果想把 image file 写到软盘，输入：</h3><p><code>cat IMG_FILE &gt; /dev/fd0</code></p><h3 id="tac-反向列示"><a href="#tac-反向列示" class="headerlink" title="tac (反向列示)"></a>tac (反向列示)</h3><p>命令：<br><code>tac log.txt</code><br>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cat log.txt </span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">[root@localhost ~]# tac log.txt </span><br><span class="line">5</span><br><span class="line">4</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">1</span><br></pre></td></tr></table></figure></p><blockquote><p>说明：<br>tac 是将 cat 反写过来，所以他的功能就跟 cat 相反， cat 是由第一行到最后一行连续显示在萤幕上，而 tac 则是由最后一行到第一行反向在萤幕上显示出来！</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;cat命令的用途是连接文件或标准输入并打印。这个命令&lt;strong&gt;常用来显示文件内容&lt;/strong&gt;，或者将几个文件连接起来显示，或者从标准输入读取内容并显示，它常与重定向符号配合使用。&lt;br&gt;语法格式&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;cat [-AbeEnst
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
-    
-    
-      <category term="命令" scheme="http://blog.zhangqifei.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux命令-bc</title>
-    <link href="http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-bc/"/>
-    <id>http://blog.zhangqifei.top/2016/07/06/linux命令-bc/</id>
-    <published>2016-07-06T01:12:42.000Z</published>
-    <updated>2018-04-22T09:29:33.238Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><blockquote><p>bc (选项) (参数)</p></blockquote><h3 id="选项值"><a href="#选项值" class="headerlink" title="选项值"></a>选项值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-i：强制进入交互式模式；</span><br><span class="line">-l：定义使用的标准数学库</span><br><span class="line">； -w：对POSIX bc的扩展给出警告信息；</span><br><span class="line">-q：不打印正常的GNU bc环境信息；</span><br><span class="line">-v：显示指令版本信息；</span><br><span class="line">-h：显示指令的帮助信息。</span><br></pre></td></tr></table></figure><h3 id="实例1："><a href="#实例1：" class="headerlink" title="实例1："></a>实例1：</h3><p>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#bc</span><br><span class="line">bc 1.06.95</span><br><span class="line">Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.</span><br><span class="line">This is free software with ABSOLUTELY NO WARRANTY.</span><br><span class="line">For details type `warranty&apos;. </span><br><span class="line">15*2</span><br><span class="line">30       //输入 quit 退出。</span><br></pre></td></tr></table></figure></p><h3 id="实例2：通过管道符"><a href="#实例2：通过管道符" class="headerlink" title="实例2：通过管道符:"></a>实例2：通过管道符:</h3><p>命令：<code>[root@centos7 ~]#echo &quot;15+5&quot; | bc  //20</code></p><h3 id="实例3：scale-2-设小数位，2-代表保留两位"><a href="#实例3：scale-2-设小数位，2-代表保留两位" class="headerlink" title="实例3：scale=2 设小数位，2 代表保留两位:"></a>实例3：scale=2 设小数位，2 代表保留两位:</h3><p>命令：<code>[root@centos7 ~]#echo &#39;scale=2;(2.777-1.44444)/1&#39; |bc  //1.33</code></p><h4 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h4><p>bc 除了 scale 来设定小数位之外，还有 ibase 和 obase 来其它进制的运算:</p><h4 id="把十进制11000000-转换为二进制192"><a href="#把十进制11000000-转换为二进制192" class="headerlink" title="把十进制11000000;转换为二进制192"></a>把十进制11000000;转换为二进制192</h4><p>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#abc=11000000 </span><br><span class="line">[root@centos7 ~]#echo &quot;obase=10;ibase=2;$abc&quot; | bc  //192</span><br></pre></td></tr></table></figure></p><h4 id="把十进制11000000-转换为二进制192-1"><a href="#把十进制11000000-转换为二进制192-1" class="headerlink" title="把十进制11000000;转换为二进制192"></a>把十进制11000000;转换为二进制192</h4><p>命令：<code>[root@centos7 ~]#echo &quot;obase=2;192&quot; |bc  //11000000</code></p><h3 id="实例4、计算平方和平方根："><a href="#实例4、计算平方和平方根：" class="headerlink" title="实例4、计算平方和平方根："></a>实例4、计算平方和平方根：</h3><p>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#echo &quot;10^10&quot; | bc  //10000000000</span><br><span class="line">[root@centos7 ~]#echo &quot;sqrt(100)&quot; | bc  //10</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;bc (选项) (参数)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;选项值&quot;&gt;&lt;a href=&quot;#选项值
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
-    
-    
-      <category term="命令" scheme="http://blog.zhangqifei.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux命令-test</title>
-    <link href="http://blog.zhangqifei.top/2016/07/06/linux%E5%91%BD%E4%BB%A4-test/"/>
-    <id>http://blog.zhangqifei.top/2016/07/06/linux命令-test/</id>
-    <published>2016-07-06T00:42:42.000Z</published>
-    <updated>2018-04-22T09:29:32.910Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>test命令是shell环境中测试条件表达式的实用工具。 </p></blockquote><p>语法：</p><blockquote><p>test(选项) 选项 </p></blockquote><p>选项 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-b&lt;文件&gt;：如果文件为一个块特殊文件，则为真；</span><br><span class="line">-c&lt;文件&gt;：如果文件为一个字符特殊文件，则为真；</span><br><span class="line">-d&lt;文件&gt;：如果文件为一个目录，则为真；</span><br><span class="line">-e&lt;文件&gt;：如果文件存在，则为真；</span><br><span class="line">-f&lt;文件&gt;：如果文件为一个普通文件，则为真；</span><br><span class="line">-g&lt;文件&gt;：如果设置了文件的SGID位，则为真；</span><br><span class="line">-G&lt;文件&gt;：如果文件存在且归该组所有，则为真；</span><br><span class="line">-k&lt;文件&gt;：如果设置了文件的粘着位，则为真；</span><br><span class="line">-O&lt;文件&gt;：如果文件存在并且归该用户所有，则为真；</span><br><span class="line">-p&lt;文件&gt;：如果文件为一个命名管道，则为真；</span><br><span class="line">-r&lt;文件&gt;：如果文件可读，则为真；</span><br><span class="line">-s&lt;文件&gt;：如果文件的长度不为零，则为真；</span><br><span class="line">-S&lt;文件&gt;：如果文件为一个套接字特殊文件，则为真；</span><br><span class="line">-u&lt;文件&gt;：如果设置了文件的SUID位，则为真；</span><br><span class="line">-w&lt;文件&gt;：如果文件可写，则为真；</span><br><span class="line">-x&lt;文件&gt;：如果文件可执行，则为真。</span><br></pre></td></tr></table></figure></p><blockquote><p>实例:linux中shell编程中的test常见用法： </p></blockquote><h3 id="判断表达式"><a href="#判断表达式" class="headerlink" title="判断表达式"></a>判断表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if test #表达式为真</span><br><span class="line">if test ! #表达式为假 </span><br><span class="line">test 表达式1 –a 表达式2 #两个表达式都为真 </span><br><span class="line">test 表达式1 –o 表达式2 #两个表达式有一个为真 </span><br><span class="line">test 表达式1 ! 表达式2 #条件求反</span><br></pre></td></tr></table></figure><h3 id="判断字符串"><a href="#判断字符串" class="headerlink" title="判断字符串"></a>判断字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test –n 字符串 #字符串的长度非零 </span><br><span class="line">test –z 字符串 #字符串的长度是否为零 </span><br><span class="line">test 字符串1＝字符串2 #字符串是否相等，若相等返回true </span><br><span class="line">test 字符串1!＝字符串2 #字符串是否不等，若不等反悔false</span><br></pre></td></tr></table></figure><h3 id="判断整数"><a href="#判断整数" class="headerlink" title="判断整数"></a>判断整数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test 整数1 -eq 整数2 #整数相等 </span><br><span class="line">test 整数1 -ge 整数2 #整数1大于等于整数2 </span><br><span class="line">test 整数1 -gt 整数2 #整数1大于整数2 </span><br><span class="line">test 整数1 -le 整数2 #整数1小于等于整数2 </span><br><span class="line">test 整数1 -lt 整数2 #整数1小于整数2 </span><br><span class="line">test 整数1 -ne 整数2 #整数1不等于整数2</span><br></pre></td></tr></table></figure><h3 id="判断文件"><a href="#判断文件" class="headerlink" title="判断文件"></a>判断文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">test File1 –ef File2 两个文件是否为同一个文件，可用于硬连接。主要判断两个文件是否指向同一个inode。 </span><br><span class="line">test File1 –nt File2 判断文件1是否比文件2新 </span><br><span class="line">test File1 –ot File2 判断文件1比是否文件2旧 </span><br><span class="line">test –b file #文件是否块设备文件 </span><br><span class="line">test –c File #文件并且是字符设备文件 </span><br><span class="line">test –d File #文件并且是目录 </span><br><span class="line">test –e File #文件是否存在 （常用） </span><br><span class="line">test –f File #文件是否为正规文件 （常用） </span><br><span class="line">test –g File #文件是否是设置了组id </span><br><span class="line">test –G File #文件属于的有效组ID </span><br><span class="line">test –h File #文件是否是一个符号链接（同-L） </span><br><span class="line">test –k File#文件是否设置了Sticky bit位 </span><br><span class="line">test –b File #文件存在并且是块设备文件 </span><br><span class="line">test –L File #文件是否是一个符号链接（同-h） </span><br><span class="line">test –o File #文件的属于有效用户ID </span><br><span class="line">test –p File #文件是一个命名管道 </span><br><span class="line">test –r File #文件是否可读 </span><br><span class="line">test –s File #文件是否是非空白文件 </span><br><span class="line">test –t FD #文件描述符是在一个终端打开的 </span><br><span class="line">test –u File #文件存在并且设置了它的set-user-id位 </span><br><span class="line">test –w File #文件是否存在并可写 </span><br><span class="line">test –x File #文件属否存在并可执行</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;test命令是shell环境中测试条件表达式的实用工具。 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;语法：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;test(选项) 选项 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;选项 :&lt;br&gt;&lt;figure
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
-    
-    
-      <category term="命令" scheme="http://blog.zhangqifei.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS（6、7）修改主机名(hostname)</title>
-    <link href="http://blog.zhangqifei.top/2016/06/06/CentOS%EF%BC%886%E3%80%817%EF%BC%89%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D(hostname)/"/>
-    <id>http://blog.zhangqifei.top/2016/06/06/CentOS（6、7）修改主机名(hostname)/</id>
-    <published>2016-06-06T01:41:22.000Z</published>
-    <updated>2018-04-22T09:29:33.283Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="centos6"><a href="#centos6" class="headerlink" title="centos6"></a>centos6</h2><p>需要修改两处：一处是<code>/etc/sysconfig/network</code>，另一处是<code>/etc/hosts</code>，只修改任一处会导致系统启动异常。首先切换到root用户。</p><ul><li><code>/etc/sysconfig/network</code><br>打开该文件，里面有一行 `HOSTNAME=localhost.localdomain，修改 localhost.localdomain 为你的主机名。</li><li><code>/etc/hosts</code><br>打开该文件，会有一行 <code>127.0.0.1 localhost.localdomain localhost</code>其中 127.0.0.1 是本地环路地址， localhost.localdomain 是主机名(hostname)，也就是你待修改的。</li></ul><p>将上面两个文件修改完后，并不能立刻生效。如果要立刻生效的话，可以用 <code>hostname your-hostname</code> 作临时修改(或者修改完之后执行<code>exec bash</code>立即改变)，它只是临时地修改主机名，查看主机名<code>uname -n</code>系统重启后会恢复原样的。</p><p>但修改上面两个文件是永久的，重启系统会得到新的主机名。<br>最后，重启后查看主机名 uname -n 。</p><h2 id="centos7"><a href="#centos7" class="headerlink" title="centos7"></a>centos7</h2><p>临时生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# hostname 132</span><br><span class="line">[root@centos7 ~]# hostname</span><br><span class="line">132</span><br></pre></td></tr></table></figure></p><p>永久生效（不会立刻修改，需重启）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# hostnamectl set-hostname centos7</span><br><span class="line">(或者修改完之后执行`exec bash`立即改变)，</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;centos6&quot;&gt;&lt;a href=&quot;#centos6&quot; class=&quot;headerlink&quot; title=&quot;centos6&quot;&gt;&lt;/a&gt;centos6&lt;/h2&gt;&lt;p&gt;需要修改两处：一处是&lt;code&gt;/etc/sysconfig/network&lt;/code&gt;，另一处是
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
-    
-    
-      <category term="CentOS" scheme="http://blog.zhangqifei.top/tags/CentOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ab命令压力测试</title>
-    <link href="http://blog.zhangqifei.top/2016/06/06/ab%E5%91%BD%E4%BB%A4%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/"/>
-    <id>http://blog.zhangqifei.top/2016/06/06/ab命令压力测试/</id>
-    <published>2016-06-06T01:41:22.000Z</published>
-    <updated>2018-04-22T09:29:32.756Z</updated>
-    
-    <content type="html"><![CDATA[<p>网站性能压力测试是服务器网站性能调优过程中必不可缺少的一环。只有让服务器处在高压情况下，才能真正体现出软件、硬件等各种设置不当所暴露出的问题。</p><p>性能测试工具目前最常见的有以下几种：ab、http_load、webbench、siege。今天我们专门来介绍ab。</p><p>ab是apache自带的压力测试工具。ab非常实用，它不仅可以对apache服务器进行网站访问压力测试，也可以对或其它类型的服务器进行压力测试。比如nginx、tomcat、IIS等。</p><p><a href="http://httpd.apache.org/docs/2.2/programs/ab.html" target="_blank" rel="noopener">官方参数文档</a></p><h4 id="一、ab的原理"><a href="#一、ab的原理" class="headerlink" title="一、ab的原理"></a>一、ab的原理</h4><p>ab是apachebench命令的缩写。</p><p>ab的原理：ab命令会创建多个并发访问线程，模拟多个访问者同时对某一URL地址进行访问。它的测试目标是基于URL的，因此，它既可以用来测试apache的负载压力，也可以测试nginx、lighthttp、tomcat、IIS等其它Web服务器的压力。</p><p>ab命令对发出负载的计算机要求很低，它既不会占用很高CPU，也不会占用很多内存。但却会给目标服务器造成巨大的负载，其原理类似CC攻击。自己测试使用也需要注意，否则一次上太多的负载。可能造成目标服务器资源耗完，严重时甚至导致死机。</p><h4 id="二、ab的安装"><a href="#二、ab的安装" class="headerlink" title="二、ab的安装"></a>二、ab的安装</h4><p>ab的安装非常简单，如果是源码安装apache的话，那就更简单了。apache安装完毕后ab命令存放在apache安装目录的bin目录下。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/apache2/bin</span><br></pre></td></tr></table></figure></p><p>如果apache 是通过yum的RPM包方式安装的话，ab命令默认存放在/usr/bin目录下。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which ab</span><br></pre></td></tr></table></figure></p><p>注意：如果不想安装apache但是又想使用ab命令的话，我们可以直接安装apache的工具包httpd-tools。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install httpd-tools</span><br></pre></td></tr></table></figure></p><p>查看ab是否安装成功，可以切换到上述目录下，使用ab –V命令进行检测。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ab -V</span><br></pre></td></tr></table></figure></p><p>如果ab安装成功，通过ab –V命令则会显示ab的相迎版本，如上图示。</p><p>注意以上是在linux平台下进行安装的，如果是windows平台下，我们也可以下载对应的apache版本进行安装。</p><p>目前apache最新版2.4.10，apache官网已经没有windows下载的版本。</p><h4 id="三、ab参数说明"><a href="#三、ab参数说明" class="headerlink" title="三、ab参数说明"></a>三、ab参数说明</h4><p>有关ab命令的使用，我们可以通过帮助命令进行查看。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ab --help</span><br></pre></td></tr></table></figure></p><p>下面我们对这些参数，进行相关说明。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">-n  在测试会话中所执行的请求个数。默认时，仅执行一个请求。</span><br><span class="line"></span><br><span class="line">-c  一次产生的请求个数。默认是一次一个。</span><br><span class="line"></span><br><span class="line">-t  测试所进行的最大秒数。其内部隐含值是-n 50000，它可以使对服务器的测试限制在一个固定的总时间以内。默认时，没有时间限制。</span><br><span class="line"></span><br><span class="line">-p  包含了需要POST的数据的文件。</span><br><span class="line"></span><br><span class="line">-P  对一个中转代理提供BASIC认证信任。用户名和密码由一个:隔开，并以base64编码形式发送。无论服务器是否需要(即, 是否发送了401认证需求代码)，此字符串都会被发送。</span><br><span class="line"></span><br><span class="line">-T  POST数据所使用的Content-type头信息。</span><br><span class="line"></span><br><span class="line">-v  设置显示信息的详细程度-4或更大值会显示头信息，3或更大值可以显示响应代码(404,200等),2或更大值可以显示警告和其他信息。</span><br><span class="line"></span><br><span class="line">-V  显示版本号并退出。</span><br><span class="line"></span><br><span class="line">-w  以HTML表的格式输出结果。默认时，它是白色背景的两列宽度的一张表。</span><br><span class="line"></span><br><span class="line">-i  执行HEAD请求，而不是GET。</span><br><span class="line"></span><br><span class="line">-x  设置&lt;table&gt;属性的字符串。</span><br><span class="line"></span><br><span class="line">-X  对请求使用代理服务器。</span><br><span class="line"></span><br><span class="line">-y  设置&lt;tr&gt;属性的字符串。</span><br><span class="line"></span><br><span class="line">-z  设置&lt;td&gt;属性的字符串。</span><br><span class="line"></span><br><span class="line">-C  对请求附加一个Cookie:行。其典型形式是name=value的一个参数对，此参数可以重复。</span><br><span class="line"></span><br><span class="line">-H  对请求附加额外的头信息。此参数的典型形式是一个有效的头信息行，其中包含了以冒号分隔的字段和值的对(如,&quot;Accept-Encoding:zip/zop;8bit&quot;)。</span><br><span class="line"></span><br><span class="line">-A  对服务器提供BASIC认证信任。用户名和密码由一个:隔开，并以base64编码形式发送。无论服务器是否需要(即,是否发送了401认证需求代码)，此字符串都会被发送。</span><br><span class="line"></span><br><span class="line">-h  显示使用方法。</span><br><span class="line"></span><br><span class="line">-d  不显示&quot;percentage served within XX [ms] table&quot;的消息(为以前的版本提供支持)。</span><br><span class="line"></span><br><span class="line">-e  产生一个以逗号分隔的(CSV)文件，其中包含了处理每个相应百分比的请求所需要(从1%到100%)的相应百分比的(以微妙为单位)时间。由于这种格式已经“二进制化”，所以比&apos;gnuplot&apos;格式更有用。</span><br><span class="line"></span><br><span class="line">-g  把所有测试结果写入一个&apos;gnuplot&apos;或者TSV(以Tab分隔的)文件。此文件可以方便地导入到Gnuplot,IDL,Mathematica,Igor甚至Excel中。其中的第一行为标题。</span><br><span class="line"></span><br><span class="line">-i  执行HEAD请求，而不是GET。</span><br><span class="line"></span><br><span class="line">-k  启用HTTP KeepAlive功能，即在一个HTTP会话中执行多个请求。默认时，不启用KeepAlive功能。</span><br><span class="line"></span><br><span class="line">-q  如果处理的请求数大于150，ab每处理大约10%或者100个请求时，会在stderr输出一个进度计数。此-q标记可以抑制这些信息。</span><br></pre></td></tr></table></figure></p><h4 id="四、ab性能指标"><a href="#四、ab性能指标" class="headerlink" title="四、ab性能指标"></a>四、ab性能指标</h4><p>在进行性能测试过程中有几个指标比较重要：</p><p>1、吞吐率（Requests per second）</p><p>服务器并发处理能力的量化描述，单位是reqs/s，指的是在某个并发用户数下单位时间内处理的请求数。某个并发用户数下单位时间内能处理的最大请求数，称之为最大吞吐率。</p><p>记住：吞吐率是基于并发用户数的。这句话代表了两个含义：</p><ul><li>a、吞吐率和并发用户数相关</li><li>b、不同的并发用户数下，吞吐率一般是不同的</li></ul><p>计算公式：总请求数/处理完成这些请求数所花费的时间，即<code>Request per second=Complete requests/Time taken for tests</code>必须要说明的是，这个数值表示当前机器的整体性能，值越大越好。</p><p>2、并发连接数（The number of concurrent connections）</p><p>并发连接数指的是某个时刻服务器所接受的请求数目，简单的讲，就是一个会话。</p><p>3、并发用户数（Concurrency Level）</p><p>要注意区分这个概念和并发连接数之间的区别，一个用户可能同时会产生多个会话，也即连接数。在HTTP/1.1下，IE7支持两个并发连接，IE8支持6个并发连接，FireFox3支持4个并发连接，所以相应的，我们的并发用户数就得除以这个基数。</p><p>4、用户平均请求等待时间（Time per request）</p><p>计算公式：处理完成所有请求数所花费的时间/（总请求数/并发用户数），即：<code>Time per request=Time taken for tests/（Complete requests/Concurrency Level）</code></p><p>5、服务器平均请求等待时间（Time per request:across all concurrent requests）</p><p>计算公式：处理完成所有请求数所花费的时间/总请求数，即：<code>Time taken for/testsComplete requests</code>可以看到，它是吞吐率的倒数。</p><p>同时，它也等于用户平均请求等待时间/并发用户数，即<code>Time per request/Concurrency Level</code></p><h4 id="五、ab实际使用"><a href="#五、ab实际使用" class="headerlink" title="五、ab实际使用"></a>五、ab实际使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]#ab -c 10 -n 100 http://a.ilanni.com/index.php</span><br><span class="line">-c    10表示并发用户数为10</span><br><span class="line">-n    100表示请求总数为100</span><br><span class="line">http://a.ilanni.com/index.php表示请求的目标URL</span><br><span class="line">这行表示同时处理100个请求并运行10次index.php文件。</span><br><span class="line"></span><br><span class="line">[root@centos7 ~]#ab -c 10 -n 100 http://a.ilanni.com/index.php</span><br><span class="line">Benchmarking 47.93.96.25 (be patient).....done</span><br><span class="line"></span><br><span class="line">Server Software:        Apache/2.4.29  ##apache版本 </span><br><span class="line">Server Hostname:        ip地址   ##请求的机子 </span><br><span class="line">Server Port:            80  ##请求端口</span><br><span class="line"></span><br><span class="line">Document Path:          index.php</span><br><span class="line">Document Length:        18483 bytes  ##页面长度</span><br><span class="line"></span><br><span class="line">Concurrency Level:      10  ##并发数</span><br><span class="line">Time taken for tests:   25.343 seconds  ##共使用了多少时间</span><br><span class="line">Complete requests:      100  ##请求数</span><br><span class="line">Failed requests:        11  ##失败请求</span><br><span class="line">   (Connect: 0, Receive: 0, Length: 11, Exceptions: 0)</span><br><span class="line">Total transferred:      1873511 bytes  ##总共传输字节数，包含http的头信息等</span><br><span class="line">HTML transferred:       1848311 bytes  ##html字节数，实际的页面传递字节数</span><br><span class="line">Requests per second:    3.95 [#/sec] (mean)  ##每秒多少请求，这个是非常重要的参数数值，服务器的吞吐量</span><br><span class="line">Time per request:       2534.265 [ms] (mean)  ##用户平均请求等待时间</span><br><span class="line">Time per request:       253.426 [ms] (mean, across all concurrent requests)  ##服务器平均处理时间，</span><br><span class="line">Transfer rate:          72.19 [Kbytes/sec] received  ##每秒获取的数据长度</span><br><span class="line"></span><br><span class="line">Connection Times (ms)</span><br><span class="line">              min  mean[+/-sd] median   max</span><br><span class="line">Connect:        0    8   3.9     10      13</span><br><span class="line">Processing:  1222 2453 322.6   2520    3436</span><br><span class="line">Waiting:     1175 2385 320.4   2452    3372</span><br><span class="line">Total:       1222 2461 322.5   2528    3444</span><br><span class="line"></span><br><span class="line">Percentage of the requests served within a certain time (ms)</span><br><span class="line">  50%   2528  ## 50%的请求在25ms内返回 </span><br><span class="line">  66%   2534  ## 60%的请求在26ms内返回 </span><br><span class="line">  75%   2538</span><br><span class="line">  80%   2539</span><br><span class="line">  90%   2545</span><br><span class="line">  95%   2556</span><br><span class="line">  98%   3395</span><br><span class="line">  99%   3444</span><br><span class="line"> 100%   3444 (longest request)</span><br></pre></td></tr></table></figure><blockquote><p>apache的ab工具也算是一种ddos攻击工具<br>nginx吞吐率就是要比apache高。<br>根据前面我们提到的性能指标Requests per second吞吐率越高，服务器性能越好。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;网站性能压力测试是服务器网站性能调优过程中必不可缺少的一环。只有让服务器处在高压情况下，才能真正体现出软件、硬件等各种设置不当所暴露出的问题。&lt;/p&gt;
-&lt;p&gt;性能测试工具目前最常见的有以下几种：ab、http_load、webbench、siege。今天我们专门来介绍ab。
       
     
     </summary>
