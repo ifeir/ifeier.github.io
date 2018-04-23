@@ -502,6 +502,31 @@
   </entry>
   
   <entry>
+    <title>CentOS（6、7）修改主机名(hostname)</title>
+    <link href="http://blog.zhangqifei.top/2016/06/06/CentOS%EF%BC%886%E3%80%817%EF%BC%89%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D(hostname)/"/>
+    <id>http://blog.zhangqifei.top/2016/06/06/CentOS（6、7）修改主机名(hostname)/</id>
+    <published>2016-06-06T01:41:22.000Z</published>
+    <updated>2018-04-22T09:29:33.283Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="centos6"><a href="#centos6" class="headerlink" title="centos6"></a>centos6</h2><p>需要修改两处：一处是<code>/etc/sysconfig/network</code>，另一处是<code>/etc/hosts</code>，只修改任一处会导致系统启动异常。首先切换到root用户。</p><ul><li><code>/etc/sysconfig/network</code><br>打开该文件，里面有一行 `HOSTNAME=localhost.localdomain，修改 localhost.localdomain 为你的主机名。</li><li><code>/etc/hosts</code><br>打开该文件，会有一行 <code>127.0.0.1 localhost.localdomain localhost</code>其中 127.0.0.1 是本地环路地址， localhost.localdomain 是主机名(hostname)，也就是你待修改的。</li></ul><p>将上面两个文件修改完后，并不能立刻生效。如果要立刻生效的话，可以用 <code>hostname your-hostname</code> 作临时修改(或者修改完之后执行<code>exec bash</code>立即改变)，它只是临时地修改主机名，查看主机名<code>uname -n</code>系统重启后会恢复原样的。</p><p>但修改上面两个文件是永久的，重启系统会得到新的主机名。<br>最后，重启后查看主机名 uname -n 。</p><h2 id="centos7"><a href="#centos7" class="headerlink" title="centos7"></a>centos7</h2><p>临时生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# hostname 132</span><br><span class="line">[root@centos7 ~]# hostname</span><br><span class="line">132</span><br></pre></td></tr></table></figure></p><p>永久生效（不会立刻修改，需重启）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# hostnamectl set-hostname centos7</span><br><span class="line">(或者修改完之后执行`exec bash`立即改变)，</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;centos6&quot;&gt;&lt;a href=&quot;#centos6&quot; class=&quot;headerlink&quot; title=&quot;centos6&quot;&gt;&lt;/a&gt;centos6&lt;/h2&gt;&lt;p&gt;需要修改两处：一处是&lt;code&gt;/etc/sysconfig/network&lt;/code&gt;，另一处是
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
+    
+    
+      <category term="CentOS" scheme="http://blog.zhangqifei.top/tags/CentOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ab命令压力测试</title>
     <link href="http://blog.zhangqifei.top/2016/06/06/ab%E5%91%BD%E4%BB%A4%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/"/>
     <id>http://blog.zhangqifei.top/2016/06/06/ab命令压力测试/</id>
@@ -524,31 +549,6 @@
     
     
       <category term="命令" scheme="http://blog.zhangqifei.top/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS（6、7）修改主机名(hostname)</title>
-    <link href="http://blog.zhangqifei.top/2016/06/06/CentOS%EF%BC%886%E3%80%817%EF%BC%89%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D(hostname)/"/>
-    <id>http://blog.zhangqifei.top/2016/06/06/CentOS（6、7）修改主机名(hostname)/</id>
-    <published>2016-06-06T01:41:22.000Z</published>
-    <updated>2018-04-22T09:29:33.283Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="centos6"><a href="#centos6" class="headerlink" title="centos6"></a>centos6</h2><p>需要修改两处：一处是<code>/etc/sysconfig/network</code>，另一处是<code>/etc/hosts</code>，只修改任一处会导致系统启动异常。首先切换到root用户。</p><ul><li><code>/etc/sysconfig/network</code><br>打开该文件，里面有一行 `HOSTNAME=localhost.localdomain，修改 localhost.localdomain 为你的主机名。</li><li><code>/etc/hosts</code><br>打开该文件，会有一行 <code>127.0.0.1 localhost.localdomain localhost</code>其中 127.0.0.1 是本地环路地址， localhost.localdomain 是主机名(hostname)，也就是你待修改的。</li></ul><p>将上面两个文件修改完后，并不能立刻生效。如果要立刻生效的话，可以用 <code>hostname your-hostname</code> 作临时修改(或者修改完之后执行<code>exec bash</code>立即改变)，它只是临时地修改主机名，查看主机名<code>uname -n</code>系统重启后会恢复原样的。</p><p>但修改上面两个文件是永久的，重启系统会得到新的主机名。<br>最后，重启后查看主机名 uname -n 。</p><h2 id="centos7"><a href="#centos7" class="headerlink" title="centos7"></a>centos7</h2><p>临时生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# hostname 132</span><br><span class="line">[root@centos7 ~]# hostname</span><br><span class="line">132</span><br></pre></td></tr></table></figure></p><p>永久生效（不会立刻修改，需重启）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# hostnamectl set-hostname centos7</span><br><span class="line">(或者修改完之后执行`exec bash`立即改变)，</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;centos6&quot;&gt;&lt;a href=&quot;#centos6&quot; class=&quot;headerlink&quot; title=&quot;centos6&quot;&gt;&lt;/a&gt;centos6&lt;/h2&gt;&lt;p&gt;需要修改两处：一处是&lt;code&gt;/etc/sysconfig/network&lt;/code&gt;，另一处是
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.zhangqifei.top/categories/linux/"/>
-    
-    
-      <category term="CentOS" scheme="http://blog.zhangqifei.top/tags/CentOS/"/>
     
   </entry>
   
